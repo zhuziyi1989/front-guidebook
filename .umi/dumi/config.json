@@ -1,0 +1,66 @@
+{
+  "menus": {
+    "en-US": {
+      "*": [
+        {
+          "path": "/",
+          "title": "📚 前端指南",
+          "meta": {
+            "order": 10
+          }
+        }
+      ],
+      "/self-test-list": [
+        {
+          "path": "/self-test-list",
+          "title": "自测清单",
+          "meta": {}
+        }
+      ],
+      "/words": [
+        {
+          "path": "/words/cn",
+          "title": "汉语",
+          "meta": {}
+        },
+        {
+          "path": "/words/en",
+          "title": "英文",
+          "meta": {}
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    }
+  ],
+  "navs": {
+    "en-US": [
+      {
+        "path": "/words",
+        "title": "Words"
+      },
+      {
+        "path": "/self-test-list",
+        "title": "Self-test-list"
+      },
+      {
+        "title": "Github",
+        "path": "https://github.com/zhuziyi1989/front-guidebook"
+      }
+    ]
+  },
+  "title": "前端指南",
+  "logo": "./favicon.png",
+  "description": "一份前端指南和私人技术笔记 🎉",
+  "mode": "site",
+  "repository": {
+    "url": "https://github.com/tsejx/javascript-guidebook",
+    "branch": "master"
+  },
+  "theme": {},
+  "exportStatic": {}
+}
