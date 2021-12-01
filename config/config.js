@@ -1,14 +1,14 @@
 const config = {
   mode: 'site',
   title: '前端指南',
-  description: '一份前端指南和私人技术笔记 🎉',
+  description: '一份前端知识体系指南、私人技术笔记 🎉',
   base: '/',
   publicPath: '/',
   favicon: './favicon.ico',
   logo: './favicon.png',
   hash: true,
   exportStatic: {},
-  // mfsu: {},
+  mfsu: {},//加速项目启动
   navs: [
     null,
     {

@@ -2,8 +2,8 @@
 title: 📚 前端指南
 order: 10
 hero:
-  title: 前端指南
-  desc: 📚 一份前端指南和私人技术笔记
+  title: 前端知识体系不完全记录
+  desc: 📚 一份前端知识体系指南、私人技术笔记
   actions:
     - text: 开始阅读
       link: /
@@ -20,11 +20,11 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by tsejx && zhuziyi
 ---
 
-前端知识体系不完全记录
+## 前端知识体系不完全记录
 
 ---
 
-## 目录
+### 目录
 
 1. [JS 语言基础](#1js语言基础)
 2. [客户端及其内核原理](#2客户端及其内核原理)
@@ -65,34 +65,27 @@ footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by tse
 - [2019面试你必须要懂的原生JS知识点](https://juejin.im/post/5cb7b62b5188253772753c01)
 - [2020年8-9月 前端找工作感受总结](https://segmentfault.com/a/1190000027083997)
 - [2020年5月 蚂蚁、字节、滴滴面试经历总结 - 桃翁](http://www.taoweng.site/index.php/archives/321/)
+- [面试分享：两年工作经验成功面试阿里P6总结](https://juejin.im/post/6844903928442667015#heading-36)
+- [2021年字节跳动前端面试手册](https://bytedance.feishu.cn/base/app8Ok6k9qafpMkgyRbfgxeEnet?table=tblEnSV2PNAajtWE&view=vewJHSwJVd)
 
 ### 学习资料
 
+#### JavaScript
+
 - 《JavaScript高级程序设计》（第3版）
-- 《HTTP权威指南》
-- 《CSS揭秘》
 - [ECMAScript 6 入门 (阮一峰)](http://es6.ruanyifeng.com/)
-- 《You-Dont-Know-JS》 [Github在线阅读](https://github.com/getify/You-Dont-Know-JS/tree/1ed-zh-CN)
-
-  购买链接：[你不知道的JavaScript（上卷）](https://u.jd.com/mwU5Oo) 、  [你不知道的JavaScript（中卷）](https://u.jd.com/jHylwd)  、 [你不知道的JavaScript（下卷）](https://u.jd.com/iO9Z43)
-
-- [React 小书](http://huziketang.com/books/react/)
-- [React 官方文档](https://zh-hans.reactjs.org/docs/)
-- [React API 速查](http://devhints.cn/react)
-- [Redux 官方文档](http://cn.redux.js.org/)
-- [React 组件间通讯（Taobao FED）](https://fed.taobao.org/blog/2016/11/17/react-components-communication/)
 - [现代 JavaScript 教程](https://zh.javascript.info/)
 - [MDN 业界标杆文档](https://developer.mozilla.org/zh-CN/)
-- [前端进阶之道](https://yuchengkai.cn/)
-
-### 相关推荐
-
-推荐一些前端开发相关电子书
+- 《You-Dont-Know-JS》《你不知道的JavaScript》[Github在线阅读](https://github.com/getify/You-Dont-Know-JS/tree/1ed-zh-CN)👨‍🔧 购买链接：[（上卷）](https://u.jd.com/mwU5Oo) 、  [（中卷）](https://u.jd.com/jHylwd)  、 [（下卷）](https://u.jd.com/iO9Z43)
 
 #### React
 
-- [React 官方文档](https://reactjs.org/)
+- [React 官方文档](https://zh-hans.reactjs.org/docs/)
 - [React 源码解析](https://react.jokcy.me/)
+- [React 小书](http://huziketang.com/books/react/)
+- [React API 速查](http://devhints.cn/react)
+- [Redux 官方文档](http://cn.redux.js.org/)
+- [React 组件间通讯（Taobao FED）](https://fed.taobao.org/blog/2016/11/17/react-components-communication/)
 
 #### Vue
 
@@ -112,3 +105,14 @@ footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by tse
 
 - [七天学会 NodeJS](https://nqdeng.github.io/7-days-nodejs/)
 - [深入理解 Node.js：核心思想与源码分析](https://yjhjstz.gitbooks.io/deep-into-node/content/)
+
+#### 其他
+
+- 书籍《CSS揭秘》
+- 书籍《HTTP权威指南》
+- [前端进阶之道](https://yuchengkai.cn/)
+
+### 分析
+
+- 优缺点分析： 我觉得我有时候会过分在意别人的感受， 比方说，不愿意直接表达不同意见，因为觉得会让对方丢面子， 其实这样做很不利于快速有效地开展工作。我希望自己能够逐渐学会更加爽快， 对人对事更加直接。
+- 项目分析：待添加
