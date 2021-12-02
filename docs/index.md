@@ -3,7 +3,7 @@ title: 📚 前端指南
 order: 10
 hero:
   title: 前端知识体系不完全记录
-  desc: 📚 一份前端知识体系指南、私人技术笔记
+  desc: 📚 一份前端知识体系指南 & 私人技术笔记
   actions:
     - text: 开始阅读
       link: /
