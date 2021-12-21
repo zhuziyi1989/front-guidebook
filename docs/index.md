@@ -6,7 +6,7 @@ hero:
   desc: 📚 一份前端知识体系指南 & 私人技术笔记
   actions:
     - text: 开始阅读
-      link: /
+      link: /notes
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: 完整体系
