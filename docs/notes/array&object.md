@@ -6,7 +6,7 @@
 - `arr.fill(value,start,end) ;`--用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。⚠️此方法**会**修改原有数组
 - `arr.filter() ;`--方法创建一个新数组, 其保留 通过所提供函数测试的 所有元素。[此方法**不会**修改原有数组](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 - `arr.join(",");`--将一个数组的所有元素连接成一个字符串返回。**不会**修改原有数组
-- `arr.sort();`--对数组的元素进行排序，并返回数组。⚠️[此方法**会**修改原有数组](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+- `arr.sort();`--采用“原地算法”对数组的元素进行排序，并返回数组。⚠️[此方法**会**修改原有数组](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 - `arr.unshift(e1, e2, en);`--添加元素到数组的头部，返回该数组的新长度。⚠️此方法**会**修改原有数组
 - `arr.push(e1, e2, en);`--添加元素到数组的尾部，返回该数组的新长度。⚠️此方法**会**修改原有数组
 - `arr.pop();`--删除数组尾部的元素。⚠️此方法**会**修改原有数组
