@@ -29,11 +29,11 @@
 
 - `Object.assign();` --将所有可枚举属性的值从一个或多个源对象分配到目标对象，它将[返回目标对象](https://links.jianshu.com/go?to=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FObject%2Fassign)
 - `Object.defineProperty() ;`--直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象
-- `object.hasOwnProperty(prop);`--对象自身属性中是否具有指定的属性（返回布尔值）
+- `Object.hasOwnProperty(prop);`--对象自身属性中是否具有指定的属性（返回布尔值）
 - `Object.getOwnPropertyNames();`--返回一个由指定对象的所有自身属性的属性名组成的数组
-- `object.propertyIsEnumerable(prop);`--判断指定的属性是否可枚举（返回布尔值）
-- `object.valueOf();`--返回指定对象的原始值
-- `object.toString();`--返回一个表示该对象的字符串，**Object.prototype.toString.call()**
+- `Object.propertyIsEnumerable(prop);`--判断指定的属性是否可枚举（返回布尔值）
+- `Object.valueOf();`--返回指定对象的原始值
+- `Object.toString();`--返回一个表示该对象的字符串，**Object.prototype.toString.call()**
 - `Object.create();`--创建一个新对象，使用现有的对象来提供新创建的对象的**proto**。
 - `Class.prototype.isPropertyOf(object);`--测试一个对象是否存在于另一个对象的原型链上
 - `Object.keys() ;`--方法会返回一个由一个给定对象的自身可枚举属性组成的数组

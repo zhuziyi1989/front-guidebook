@@ -1,7 +1,6 @@
 ---
 group:
   title: 玩转 Linux 系统
-  order: 4
 ---
 
 # Linux 远程登录欢迎语
