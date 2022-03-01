@@ -22,8 +22,8 @@ group:
   -rw-r--r--   1 root  root issue.net // 网络登陆（后）显示的信息，登录后显示，需要由sshd配置
  
 ➜  /etc ls -l|grep motd
-	drwxr-xr-x.  2 root  root motd.d // 常用于通告信息，如计划关机时间的警告等，登陆后的提示信息
-	
+ drwxr-xr-x.  2 root  root motd.d // 常用于通告信息，如计划关机时间的警告等，登陆后的提示信息
+ 
 ➜  /etc neofetch 
 
                  ..                    
@@ -56,3 +56,49 @@ group:
 neofetch
 ```
 
+## 系统基本设置
+
+### 语言设置（以中文为例）
+
+```bash
+# 查看当前系统语言
+~ echo $LANG // 如果是英文，会打印出 en_US.UTF-8
+
+# 查看安装的语言包
+~ locale 
+
+# 查看系统中已有支持的语言
+~ locale -a
+~ locale -a |grep zh_CN //过滤筛选 zh_CN
+```
+
+```bash
+# Ubuntu 安装中文语言
+~ sudo locale-gen "zh_CN.UTF-8"
+# Centos8 安装中文语言
+~ dnf install -y langpacks-zh_CN
+
+# Ubuntu 重设系统语言
+~ sudo dpkg-reconfigure locales
+
+# 设定档，在以下文件加入： LC_ALL="zh_CN.UTF-8"
+~ vim /etc/default/locale
+```
+
+### 软件包源
+
+- 阿里云源： <https://developer.aliyun.com/mirror/>
+- 腾讯云源： <https://mirrors.tencent.com/>
+- 清华大学源：<https://mirrors.tuna.tsinghua.edu.cn/>
+
+### 系统版本查看
+
+```bash
+# Linux 通用方法
+~ cat /proc/version
+~ uname --all
+~ hostnamectl
+
+# Centos 查看版本
+~ cat /etc/redhat-release
+```

@@ -41,6 +41,7 @@ footer: Open-source MIT Licensed | Copyright © 2019-present<br />Powered by tse
 
 - [JavaScript Interview Questions & Answers](https://github.com/sudheerj/javascript-interview-questions) （英文）
 - [FE-Interview-Questions](https://github.com/poetries/FE-Interview-Questions/issues/2) (中文)
+- [Front End Interview Handbook](https://www.frontendinterviewhandbook.com/zh/) (中英文)
 
 ### 优秀面试分享
 

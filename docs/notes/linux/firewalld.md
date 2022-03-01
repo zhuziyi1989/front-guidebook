@@ -92,7 +92,7 @@ $ ls -l /usr/lib/firewalld/zones/
 1. 更改运行时配置并使其永久:
 
 ```Shell
-$ firewall-cmd <options
+$ firewall-cmd <options>
 $ firewall-cmd --runtime-to-permanent # 将之前做的更改永久化
 ```
 
