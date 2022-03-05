@@ -1,3 +1,8 @@
+---
+group:
+  title: 玩转 Linux 系统
+---
+
 # CentOS 8防火墙配置、管理与实践
 
 *在本文中，将展示如何为您的CentOS 8设置防火墙，并在`firewall-cmd`管理工具的帮助下进行管理。*
@@ -87,7 +92,7 @@ $ ls -l /usr/lib/firewalld/zones/
 1. 更改运行时配置并使其永久:
 
 ```Shell
-$ firewall-cmd <options
+$ firewall-cmd <options>
 $ firewall-cmd --runtime-to-permanent # 将之前做的更改永久化
 ```
 

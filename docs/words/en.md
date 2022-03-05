@@ -76,3 +76,5 @@
 34. prototype [美: 'protə'taɪp] n. 原型；标准，模范
 35. instantaneously  [美: ˌɪnstənˈteɪniəsli] adv. 即刻；突如其来地
 36. attach [美: əˈtætʃ] vi. 附加；附属；伴随  （at·tach to 附属于）
+37. transform
+38. translate v. 翻译；译；被翻译；被译成；(使)转变，变为；（以某种方式）理解
