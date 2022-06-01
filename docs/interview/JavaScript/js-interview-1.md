@@ -1,10 +1,13 @@
 # JavaScript 进阶问题列表
 
-[来源这里](https://github.com/lydiahallie/javascript-questions/blob/master/zh-CN/README-zh_CN.md) | 更新时间：2020.08.07
+
+[来源这里](https://github.com/lydiahallie/javascript-questions/blob/master/zh-CN/README-zh_CN.md) | 更新时间：2022.06.01
+
+答案在问题下方的折叠部分，点击即可展开问题。祝你好运 :heart:
 
 ---
 
-## 1. 输出是什么？
+###### 1. 输出是什么？
 
 ```javascript
 function sayHi() {
@@ -25,7 +28,7 @@ sayHi()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 在函数内部，我们首先通过 `var` 关键字声明了 `name` 变量。这意味着变量被提升了（内存空间在创建阶段就被设置好了），直到程序运行到定义变量位置之前默认值都是 `undefined`。因为当我们打印 `name` 变量时还没有执行到定义变量的位置，因此变量的值保持为 `undefined`。
 
@@ -36,7 +39,7 @@ sayHi()
 
 ---
 
-## 2. 输出是什么？
+###### 2. 输出是什么？
 
 ```javascript
 for (var i = 0; i < 3; i++) {
@@ -55,7 +58,7 @@ for (let i = 0; i < 3; i++) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 由于 JavaScript 的事件循环，`setTimeout` 回调会在*遍历结束后*才执行。因为在第一个遍历中遍历 `i` 是通过 `var` 关键字声明的，所以这个值是全局作用域下的。在遍历过程中，我们通过一元操作符 `++` 来每次递增 `i` 的值。当 `setTimeout` 回调执行的时候，`i` 的值等于 3。
 
@@ -66,7 +69,7 @@ for (let i = 0; i < 3; i++) {
 
 ---
 
-## 3. 输出是什么？
+###### 3. 输出是什么？
 
 ```javascript
 const shape = {
@@ -89,7 +92,7 @@ shape.perimeter()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 注意 `diameter` 的值是一个常规函数，但是 `perimeter` 的值是一个箭头函数。
 
@@ -102,7 +105,7 @@ shape.perimeter()
 
 ---
 
-## 4. 输出是什么？
+###### 4. 输出是什么？
 
 ```javascript
 +true;
@@ -116,7 +119,7 @@ shape.perimeter()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 一元操作符加号尝试将 bool 转为 number。`true` 转换为 number 的话为 `1`，`false` 为 `0`。
 
@@ -127,7 +130,7 @@ shape.perimeter()
 
 ---
 
-## 5. 哪一个是正确的？
+###### 5. 哪一个是正确的？
 
 ```javascript
 const bird = {
@@ -148,7 +151,7 @@ const mouse = {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 在 JavaScript 中，所有对象的 keys 都是字符串（除非对象是 Symbol）。尽管我们可能不会定义它们为字符串，但它们在底层总会被转换为字符串。
 
@@ -164,7 +167,7 @@ const mouse = {
 ---
 
 
-## 6. 输出是什么？
+###### 6. 输出是什么？
 
 ```javascript
 let c = { greeting: 'Hey!' }
@@ -183,7 +186,7 @@ console.log(d.greeting)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 在 JavaScript 中，当设置两个对象彼此相等时，它们会通过*引用*进行交互。
 
@@ -198,7 +201,7 @@ console.log(d.greeting)
 
 ---
 
-## 7. 输出是什么？
+###### 7. 输出是什么？
 
 ```javascript
 let a = 3
@@ -218,7 +221,7 @@ console.log(b === c)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 `new Number()` 是一个内建的函数构造器。虽然它看着像是一个 number，但它实际上并不是一个真实的 number：它有一堆额外的功能并且它是一个对象。
 
@@ -231,7 +234,7 @@ console.log(b === c)
 
 ---
 
-## 8. 输出是什么？
+###### 8. 输出是什么？
 
 ```javascript
 class Chameleon {
@@ -257,7 +260,7 @@ freddie.colorChange('orange')
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 `colorChange` 是一个静态方法。静态方法被设计为只能被创建它们的构造器使用（也就是 `Chameleon`），并且不能传递给实例。因为 `freddie` 是一个实例，静态方法不能被实例使用，因此抛出了 `TypeError` 错误。
 
@@ -266,7 +269,7 @@ freddie.colorChange('orange')
 
 ---
 
-## 9. 输出是什么？
+###### 9. 输出是什么？
 
 ```javascript
 let greeting
@@ -281,7 +284,7 @@ console.log(greetign)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 代码打印出了一个对象，这是因为我们在全局对象上创建了一个空对象！当我们将 `greeting` 写错成 `greetign` 时，JS 解释器实际在上浏览器中将它视为 `global.greetign = {}` （或者 `window.greetign = {}`）。
 
@@ -292,7 +295,7 @@ console.log(greetign)
 
 ---
 
-## 10. 当我们这么做时，会发生什么？
+###### 10. 当我们这么做时，会发生什么？
 
 ```javascript
 function bark() {
@@ -310,7 +313,7 @@ bark.animal = 'dog'
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 这在 JavaScript 中是可以的，因为函数是对象！（除了基本类型之外其他都是对象）
 
@@ -321,7 +324,7 @@ bark.animal = 'dog'
 
 ---
 
-## 11. 输出是什么？
+###### 11. 输出是什么？
 
 ```javascript
 function Person(firstName, lastName) {
@@ -345,7 +348,7 @@ console.log(member.getFullName());
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 你不能像常规对象那样，给构造函数添加属性。如果你想一次性给所有实例添加特性，你应该使用原型。因此本例中，使用如下方式：
 
@@ -362,7 +365,7 @@ Person.prototype.getFullName = function () {
 
 ---
 
-## 12. 输出是什么？
+###### 12. 输出是什么？
 
 ```javascript
 function Person(firstName, lastName) {
@@ -385,7 +388,7 @@ console.log(sarah)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 对于 `sarah`，我们没有使用 `new` 关键字。当使用 `new` 时，`this` 引用我们创建的空对象。当未使用 `new` 时，`this` 引用的是**全局对象**（global object）。
 
@@ -396,7 +399,7 @@ console.log(sarah)
 
 ---
 
-## 13. 事件传播的三个阶段是什么？
+###### 13. 事件传播的三个阶段是什么？
 
 - A: Target > Capturing > Bubbling
 - B: Bubbling > Target > Capturing
@@ -406,7 +409,7 @@ console.log(sarah)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 在**捕获**（capturing）阶段中，事件从祖先元素向下传播到目标元素。当事件达到**目标**（target）元素后，**冒泡**（bubbling）才开始。
 
@@ -417,7 +420,7 @@ console.log(sarah)
 
 ---
 
-## 14. 所有对象都有原型。
+###### 14. 所有对象都有原型。
 
 - A: 对
 - B: 错
@@ -425,7 +428,7 @@ console.log(sarah)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 除了**基本对象**（base object），所有对象都有原型。基本对象可以访问一些方法和属性，比如 `.toString`。这就是为什么你可以使用内置的 JavaScript 方法！所有这些方法在原型上都是可用的。虽然 JavaScript 不能直接在对象上找到这些方法，但 JavaScript 会沿着原型链找到它们，以便于你使用。
 
@@ -434,7 +437,7 @@ console.log(sarah)
 
 ---
 
-## 15. 输出是什么？
+###### 15. 输出是什么？
 
 ```javascript
 function sum(a, b) {
@@ -452,7 +455,7 @@ sum(1, '2')
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 JavaScript 是一种**动态类型语言**：我们不指定某些变量的类型。值可以在你不知道的情况下自动转换成另一种类型，这种类型称为**隐式类型转换**（implicit type coercion）。**Coercion** 是指将一种类型转换为另一种类型。
 
@@ -463,7 +466,7 @@ JavaScript 是一种**动态类型语言**：我们不指定某些变量的类�
 
 ---
 
-## 16. 输出是什么？
+###### 16. 输出是什么？
 
 ```javascript
 let number = 0
@@ -480,7 +483,7 @@ console.log(number)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 一元**后自增**运算符 `++`：
 
@@ -499,7 +502,7 @@ console.log(number)
 
 ---
 
-## 17. 输出是什么？
+###### 17. 输出是什么？
 
 ```javascript
 function getPersonInfo(one, two, three) {
@@ -521,7 +524,7 @@ getPersonInfo`${person} is ${age} years old`
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 如果使用标记模板字面量，第一个参数的值总是包含字符串的数组。其余的参数获取的是传递的表达式的值！
 
@@ -530,7 +533,7 @@ getPersonInfo`${person} is ${age} years old`
 
 ---
 
-## 18. 输出是什么？
+###### 18. 输出是什么？
 
 ```javascript
 function checkAge(data) {
@@ -553,7 +556,7 @@ checkAge({ age: 18 })
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 在测试相等性时，基本类型通过它们的值（value）进行比较，而对象通过它们的引用（reference）进行比较。JavaScript 检查对象是否具有对内存中相同位置的引用。
 
@@ -566,7 +569,7 @@ checkAge({ age: 18 })
 
 ---
 
-## 19. 输出是什么？
+###### 19. 输出是什么？
 
 ```javascript
 function getAge(...args) {
@@ -584,7 +587,7 @@ getAge(21)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 扩展运算符（`...args`）会返回实参组成的数组。而数组是对象，因此 `typeof args` 返回 `"object"`。
 
@@ -593,7 +596,7 @@ getAge(21)
 
 ---
 
-## 20. 输出是什么？
+###### 20. 输出是什么？
 
 ```javascript
 function getAge() {
@@ -613,7 +616,7 @@ getAge()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 使用 `"use strict"`，你可以确保不会意外地声明全局变量。我们从来没有声明变量 `age`，因为我们使用 `"use strict"`，它将抛出一个引用错误。如果我们不使用 `"use strict"`，它就会工作，因为属性 `age` 会被添加到全局对象中了。
 
@@ -622,7 +625,7 @@ getAge()
 
 ---
 
-## 21. 输出是什么？
+###### 21. 输出是什么？
 
 ```javascript
 const sum = eval('10*10+5')
@@ -636,7 +639,7 @@ const sum = eval('10*10+5')
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 代码以字符串形式传递进来，`eval` 对其求值。如果它是一个表达式，就像本例中那样，它对表达式求值。表达式是 `10 * 10 + 5`。这将返回数字 `105`。
 
@@ -645,7 +648,7 @@ const sum = eval('10*10+5')
 
 ---
 
-## 22. cool_secret 可访问多长时间？
+###### 22. cool_secret 可访问多长时间？
 
 ```javascript
 sessionStorage.setItem('cool_secret', 123)
@@ -659,7 +662,7 @@ sessionStorage.setItem('cool_secret', 123)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 关闭 **tab 标签页** 后，`sessionStorage` 存储的数据才会删除。
 
@@ -670,7 +673,7 @@ sessionStorage.setItem('cool_secret', 123)
 
 ---
 
-## 23. 输出是什么？
+###### 23. 输出是什么？
 
 ```javascript
 var num = 8
@@ -687,7 +690,7 @@ console.log(num)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 使用 `var` 关键字，你可以用相同的名称声明多个变量。然后变量将保存最新的值。
 
@@ -698,7 +701,7 @@ console.log(num)
 
 ---
 
-## 24. 输出是什么？
+###### 24. 输出是什么？
 
 ```javascript
 const obj = { 1: 'a', 2: 'b', 3: 'c' }
@@ -718,7 +721,7 @@ set.has(1)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 所有对象的键（不包括 Symbol）在底层都是字符串，即使你自己没有将其作为字符串输入。这就是为什么 `obj.hasOwnProperty('1')` 也返回 `true`。
 
@@ -729,7 +732,7 @@ set.has(1)
 
 ---
 
-## 25. 输出是什么？
+###### 25. 输出是什么？
 
 ```javascript
 const obj = { a: 'one', b: 'two', a: 'three' }
@@ -744,7 +747,7 @@ console.log(obj)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 如果你有两个名称相同的键，则键会被替换掉。它仍然位于第一个键出现的位置，但是值是最后出现那个键的值。
 
@@ -753,7 +756,7 @@ console.log(obj)
 
 ---
 
-## 26. JavaScript 全局执行上下文为你做了两件事：全局对象和 this 关键字。
+###### 26. JavaScript 全局执行上下文为你做了两件事：全局对象和 this 关键字。
 
 - A: 对
 - B: 错
@@ -762,7 +765,7 @@ console.log(obj)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 基本执行上下文是全局执行上下文：它是代码中随处可访问的内容。
 
@@ -771,7 +774,7 @@ console.log(obj)
 
 ---
 
-## 27. 输出是什么？
+###### 27. 输出是什么？
 
 ```javascript
 for (let i = 1; i < 5; i++) {
@@ -788,7 +791,7 @@ for (let i = 1; i < 5; i++) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 如果某个条件返回 `true`，则 `continue` 语句跳过本次迭代。
 
@@ -797,7 +800,7 @@ for (let i = 1; i < 5; i++) {
 
 ---
 
-## 28. 输出是什么？
+###### 28. 输出是什么？
 
 ```javascript
 String.prototype.giveLydiaPizza = () => {
@@ -817,7 +820,7 @@ name.giveLydiaPizza()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 `String` 是内置的构造函数，我们可以向它添加属性。我只是在它的原型中添加了一个方法。基本类型字符串被自动转换为字符串对象，由字符串原型函数生成。因此，所有 string(string 对象)都可以访问该方法！
 
@@ -826,7 +829,7 @@ name.giveLydiaPizza()
 
 ---
 
-## 29. 输出是什么？
+###### 29. 输出是什么？
 
 ```javascript
 const a = {}
@@ -847,7 +850,7 @@ console.log(a[b])
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 对象的键被自动转换为字符串。我们试图将一个对象 `b` 设置为对象 `a` 的键，且相应的值为 `123`。
 
@@ -860,7 +863,7 @@ console.log(a[b])
 
 ---
 
-## 30. 输出是什么？
+###### 30. 输出是什么？
 
 ```javascript
 const foo = () => console.log('First')
@@ -880,7 +883,7 @@ baz()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 我们有一个 `setTimeout` 函数，并首先调用它。然而，它是最后打印日志的。
 
@@ -913,7 +916,7 @@ WebAPI 不能随时向栈内添加内容。相反，它将回调函数推到名�
 
 ---
 
-## 31. 当点击按钮时，event.target是什么？
+###### 31. 当点击按钮时，event.target是什么？
 
 ```html
 <div onclick="console.log('first div')">
@@ -933,7 +936,7 @@ WebAPI 不能随时向栈内添加内容。相反，它将回调函数推到名�
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 导致事件的最深嵌套的元素是事件的 target。你可以通过 `event.stopPropagation` 来停止冒泡。
 
@@ -942,7 +945,7 @@ WebAPI 不能随时向栈内添加内容。相反，它将回调函数推到名�
 
 ---
 
-## 32. 当您单击该段落时，日志输出是什么？
+###### 32. 当您单击该段落时，日志输出是什么？
 
 ```html
 <div onclick="console.log('div')">
@@ -960,7 +963,7 @@ WebAPI 不能随时向栈内添加内容。相反，它将回调函数推到名�
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 如果我们点击 `p`，我们会看到两个日志：`p` 和 `div`。在事件传播期间，有三个阶段：捕获、目标和冒泡。默认情况下，事件处理程序在冒泡阶段执行（除非将 `useCapture` 设置为 `true`）。它从嵌套最深的元素向外传播。
 
@@ -969,7 +972,7 @@ WebAPI 不能随时向栈内添加内容。相反，它将回调函数推到名�
 
 ---
 
-## 33. 输出是什么？
+###### 33. 输出是什么？
 
 ```javascript
 const person = { name: 'Lydia' }
@@ -990,7 +993,7 @@ sayHi.bind(person, 21)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 使用这两种方法，我们都可以传递我们希望 `this` 关键字引用的对象。但是，`.call` 是**立即执行**的。
 
@@ -1001,7 +1004,7 @@ sayHi.bind(person, 21)
 
 ---
 
-## 34. 输出是什么？
+###### 34. 输出是什么？
 
 ```javascript
 function sayHi() {
@@ -1019,7 +1022,7 @@ typeof sayHi()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 `sayHi` 方法返回的是立即执行函数(IIFE)的返回值.此立即执行函数的返回值是 `0`， 类型是 `number`
 
@@ -1030,7 +1033,7 @@ typeof sayHi()
 
 ---
 
-## 35. 下面哪些值是 falsy?
+###### 35. 下面哪些值是 falsy?
 
 ```javascript
 0
@@ -1049,18 +1052,20 @@ undefined
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
-只有 6 种 [falsy](https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy) 值:
+只有 8 种 [falsy](https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy) 值:
 
 
 
 - `undefined`
 - `null`
 - `NaN`
-- `0`
-- `''` (empty string)
 - `false`
+- `''` (empty string)
+- `0`
+- `-0`
+- `0n` (BigInt(0))
 
 `Function` 构造函数, 比如 `new Number` 和 `new Boolean`，是 [truthy](https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy)。
 
@@ -1069,7 +1074,7 @@ undefined
 
 ---
 
-## 36. 输出是什么？
+###### 36. 输出是什么？
 
 ```javascript
 console.log(typeof typeof 1)
@@ -1083,7 +1088,7 @@ console.log(typeof typeof 1)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 `typeof 1` 返回 `"number"`。
 `typeof "number"` 返回 `"string"`。
@@ -1093,7 +1098,7 @@ console.log(typeof typeof 1)
 
 ---
 
-## 37. 输出是什么？
+###### 37. 输出是什么？
 
 ```javascript
 const numbers = [1, 2, 3]
@@ -1109,7 +1114,7 @@ console.log(numbers)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 当你为数组设置超过数组长度的值的时候， JavaScript 会创建名为 "empty slots" 的东西。它们的值实际上是 `undefined`。你会看到以下场景：
 
@@ -1122,7 +1127,7 @@ console.log(numbers)
 
 ---
 
-## 38. 输出是什么？
+###### 38. 输出是什么？
 
 ```javascript
 (() => {
@@ -1146,7 +1151,7 @@ console.log(numbers)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 `catch` 代码块接收参数 `x`。当我们传递参数时，这与之前定义的变量 `x` 不同 。这个 `x` 是属于 `catch` 块级作用域的。
 
@@ -1159,7 +1164,7 @@ console.log(numbers)
 
 ---
 
-## 39. JavaScript 中的一切都是？
+###### 39. JavaScript 中的一切都是？
 
 - A: 基本类型与对象
 - B: 函数与对象
@@ -1169,7 +1174,7 @@ console.log(numbers)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 JavaScript 只有基本类型和对象。
 
@@ -1180,7 +1185,7 @@ JavaScript 只有基本类型和对象。
 
 ---
 
-## 40. 输出是什么？
+###### 40. 输出是什么？
 
 ```javascript
 [[0, 1], [2, 3]].reduce(
@@ -1199,7 +1204,7 @@ JavaScript 只有基本类型和对象。
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 `[1, 2]`是初始值。初始值将会作为首次调用时第一个参数 `acc` 的值。在第一次执行时， `acc` 的值是 `[1, 2]`， `cur` 的值是 `[0, 1]`。合并它们，结果为 `[1, 2, 0, 1]`。
 第二次执行， `acc` 的值是 `[1, 2, 0, 1]`， `cur` 的值是 `[2, 3]`。合并它们，最终结果为 `[1, 2, 0, 1, 2, 3]`
@@ -1209,7 +1214,7 @@ JavaScript 只有基本类型和对象。
 
 ---
 
-## 41. 输出是什么？
+###### 41. 输出是什么？
 
 ```javascript
 !!null
@@ -1225,7 +1230,7 @@ JavaScript 只有基本类型和对象。
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 `null` 是 [falsy](https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy)。 `!null` 的值是 `true`。 `!true` 的值是 `false`。
 
@@ -1238,7 +1243,7 @@ JavaScript 只有基本类型和对象。
 
 ---
 
-## 42. `setInterval` 方法的返回值是什么？
+###### 42. `setInterval` 方法的返回值是什么？
 
 ```javascript
 setInterval(() => console.log('Hi'), 1000)
@@ -1252,7 +1257,7 @@ setInterval(() => console.log('Hi'), 1000)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 `setInterval` 返回一个唯一的 id。此 id 可被用于 `clearInterval` 函数来取消定时。
 
@@ -1261,7 +1266,7 @@ setInterval(() => console.log('Hi'), 1000)
 
 ---
 
-## 43. 输出是什么？
+###### 43. 输出是什么？
 
 ```javascript
 [...'Lydia']
@@ -1275,7 +1280,7 @@ setInterval(() => console.log('Hi'), 1000)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 string 类型是可迭代的。扩展运算符将迭代的每个字符映射成一个元素。
 
@@ -1284,7 +1289,7 @@ string 类型是可迭代的。扩展运算符将迭代的每个字符映射成�
 
 ---
 
-## 44. 输出是什么?
+###### 44. 输出是什么?
 
 ```javascript
 function* generator(i) {
@@ -1306,7 +1311,7 @@ console.log(gen.next().value);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 一般的函数在执行之后是不能中途停下的。但是，生成器函数却可以中途“停下”，之后可以再从停下的地方继续。当生成器遇到`yield`关键字的时候，会生成`yield`后面的值。注意，生成器在这种情况下不 _返回_ (_return_ )值，而是 _生成_ (_yield_)值。
 
@@ -1318,7 +1323,7 @@ console.log(gen.next().value);
 </p>
 </details>
 
-## 45. 返回值是什么?
+###### 45. 返回值是什么?
 
 ```javascript
 const firstPromise = new Promise((res, rej) => {
@@ -1340,7 +1345,7 @@ Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 当我们向`Promise.race`方法中传入多个`Promise`时，会进行 _优先_ 解析。在这个例子中，我们用`setTimeout`给`firstPromise`和`secondPromise`分别设定了500ms和100ms的定时器。这意味着`secondPromise`会首先解析出字符串`two`。那么此时`res`参数即为`two`，是为输出结果。
 
@@ -1349,7 +1354,7 @@ Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
 
 ---
 
-## 46. 输出是什么?
+###### 46. 输出是什么?
 
 ```javascript
 let person = { name: "Lydia" };
@@ -1367,7 +1372,7 @@ console.log(members);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 
 首先我们声明了一个拥有`name`属性的对象 `person`。
@@ -1389,7 +1394,7 @@ console.log(members);
 
 ---
 
-## 47. 输出是什么?
+###### 47. 输出是什么?
 
 ```javascript
 const person = {
@@ -1410,7 +1415,7 @@ for (const item in person) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 在`for-in`循环中,我们可以通过对象的key来进行迭代,也就是这里的`name`和`age`。在底层，对象的key都是字符串（如果他们不是Symbol的话）。在每次循环中，我们将`item`设定为当前遍历到的key.所以一开始，`item`是`name`，之后 `item`输出的则是`age`。
 
@@ -1419,7 +1424,7 @@ for (const item in person) {
 
 ---
 
-## 48. 输出是什么?
+###### 48. 输出是什么?
 
 ```javascript
 console.log(3 + 4 + "5");
@@ -1433,7 +1438,7 @@ console.log(3 + 4 + "5");
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 当所有运算符的 _优先级_ 相同时，计算表达式需要确定运算符的结合顺序，即从右到左还是从左往右。在这个例子中，我们只有一类运算符`+`，对于加法来说，结合顺序就是从左到右。
 
@@ -1446,7 +1451,7 @@ console.log(3 + 4 + "5");
 
 ---
 
-## 49. `num`的值是什么?
+###### 49. `num`的值是什么?
 
 ```javascript
 const num = parseInt("7*6", 10);
@@ -1460,7 +1465,7 @@ const num = parseInt("7*6", 10);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 只返回了字符串中第一个字母. 设定了 _进制_ 后 (也就是第二个参数，指定需要解析的数字是什么进制: 十进制、十六机制、八进制、二进制等等……),`parseInt` 检查字符串中的字符是否合法. 一旦遇到一个在指定进制中不合法的字符后，立即停止解析并且忽略后面所有的字符。
 
@@ -1471,7 +1476,7 @@ const num = parseInt("7*6", 10);
 
 ---
 
-## 50. 输出是什么?
+###### 50. 输出是什么?
 
 ```javascript
 [1, 2, 3].map(num => {
@@ -1488,7 +1493,7 @@ const num = parseInt("7*6", 10);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 对数组进行映射的时候,`num`就是当前循环到的元素. 在这个例子中，所有的映射都是number类型，所以if中的判断`typeof num === "number"`结果都是`true`.map函数创建了新数组并且将函数的返回值插入数组。
 
@@ -1499,7 +1504,7 @@ const num = parseInt("7*6", 10);
 
 ---
 
-## 51. 输出的是什么?
+###### 51. 输出的是什么?
 
 ```javascript
 function getInfo(member, year) {
@@ -1523,7 +1528,7 @@ console.log(person, birthYear);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 普通参数都是 _值_ 传递的，而对象则不同，是 _引用_ 传递。所以说，`birthYear`是值传递，因为他是个字符串而不是对象。当我们对参数进行值传递时，会创建一份该值的 _复制_ 。（可以参考问题46）
 
@@ -1536,7 +1541,7 @@ console.log(person, birthYear);
 
 ---
 
-## 52. 输出是什么?
+###### 52. 输出是什么?
 
 ```javascript
 function greeting() {
@@ -1563,7 +1568,7 @@ sayHi();
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 通过`throw`语句，我么可以创建自定义错误。 而通过它，我们可以抛出异常。异常可以是一个<b>字符串</b>, 一个 <b>数字</b>, 一个 <b>布尔类型</b> 或者是一个 <b>对象</b>。在本例中，我们的异常是字符串`'Hello world'`.
 
@@ -1574,7 +1579,7 @@ sayHi();
 
 ---
 
-## 53. 输出是什么?
+###### 53. 输出是什么?
 
 ```javascript
 function Car() {
@@ -1594,7 +1599,7 @@ console.log(myCar.make);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 返回属性的时候，属性的值等于 _返回的_ 值，而不是构造函数中设定的值。我们返回了字符串 `"Maserati"`，所以 `myCar.make`等于`"Maserati"`.
 
@@ -1603,7 +1608,7 @@ console.log(myCar.make);
 
 ---
 
-## 54. 输出是什么?
+###### 54. 输出是什么?
 
 ```javascript
 (() => {
@@ -1622,7 +1627,7 @@ console.log(typeof y);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 `let x = y = 10;` 是下面这个表达式的缩写:
 
@@ -1642,7 +1647,7 @@ let x = y;
 
 ---
 
-## <a name=20190629></a>55. 输出是什么?
+###### <a name=20190629></a>55. 输出是什么?
 
 ```javascript
 class Dog {
@@ -1672,7 +1677,7 @@ pet.bark();
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 我们可以用`delete`关键字删除对象的属性，对原型也是适用的。删除了原型的属性后，该属性在原型链上就不可用了。在本例中，函数`bark`在执行了`delete Dog.prototype.bark`后不可用, 然而后面的代码还在调用它。
 
@@ -1683,7 +1688,7 @@ pet.bark();
 
 ---
 
-## 56. 输出是什么?
+###### 56. 输出是什么?
 
 ```javascript
 const set = new Set([1, 1, 2, 3, 4]);
@@ -1699,7 +1704,7 @@ console.log(set);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 `Set`对象是独一无二的值的集合：也就是说同一个值在其中仅出现一次。
 
@@ -1710,7 +1715,7 @@ console.log(set);
 
 ---
 
-## 57. 输出是什么?
+###### 57. 输出是什么?
 
 ```javascript
 // counter.js
@@ -1735,7 +1740,7 @@ console.log(myCounter);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 引入的模块是 _只读_ 的: 你不能修改引入的模块。只有导出他们的模块才能修改其值。
 
@@ -1746,7 +1751,7 @@ console.log(myCounter);
 
 ---
 
-## 58. 输出是什么?
+###### 58. 输出是什么?
 
 ```javascript
 const name = "Lydia";
@@ -1764,7 +1769,7 @@ console.log(delete age);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 `delete`操作符返回一个布尔值： `true`指删除成功，否则返回`false`. 但是通过 `var`, `const` 或 `let` 关键字声明的变量无法用 `delete` 操作符来删除。
 
@@ -1775,7 +1780,7 @@ console.log(delete age);
 
 ---
 
-## 59. 输出是什么?
+###### 59. 输出是什么?
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -1792,7 +1797,7 @@ console.log(y);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 我们可以通过解构赋值来解析来自对象的数组或属性的值，比如说：
 
@@ -1817,7 +1822,7 @@ console.log(y);
 
 ---
 
-## 60. 输出是什么?
+###### 60. 输出是什么?
 
 ```javascript
 const user = { name: "Lydia", age: 21 };
@@ -1834,7 +1839,7 @@ console.log(admin);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 扩展运算符`...`为对象的组合提供了可能。你可以复制对象中的键值对，然后把它们加到另一个对象里去。在本例中，我们复制了`user`对象键值对，然后把它们加入到`admin`对象中。`admin`对象就拥有了这些键值对，所以结果为`{ admin: true, name: "Lydia", age: 21 }`.
 
@@ -1843,7 +1848,7 @@ console.log(admin);
 
 ---
 
-## 61. 输出是什么?
+###### 61. 输出是什么?
 
 ```javascript
 const person = { name: "Lydia" };
@@ -1862,18 +1867,18 @@ console.log(Object.keys(person));
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 通过`defineProperty`方法，我们可以给对象添加一个新属性，或者修改已经存在的属性。而我们使用`defineProperty`方法给对象添加了一个属性之后，属性默认为 _不可枚举(not enumerable)_. `Object.keys`方法仅返回对象中 _可枚举(enumerable)_ 的属性，因此只剩下了`"name"`.
 
-用`defineProperty`方法添加的属性默认不可变。你可以通过`writable`, `configurable` 和 `enumerable`属性来改变这一行为。这样的话， 相比于自己添加的属性，`defineProperty`方法添加的属性有了更多的控制权。
+用`defineProperty`方法添加的属性默认不可变。你可以通过`writable`, `configurable` 和 `enumerable`属性来改变这一行为。这样，`defineProperty`方法可以让您更好地控制要添加到对象的属性。
 
 </p>
 </details>
 
 ---
 
-## 62. 输出是什么?
+###### 62. 输出是什么?
 
 ```javascript
 const settings = {
@@ -1894,7 +1899,7 @@ console.log(data);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 `JSON.stringify`的第二个参数是 _替代者(replacer)_. 替代者(replacer)可以是个函数或数组，用以控制哪些值如何被转换为字符串。
 
@@ -1908,7 +1913,7 @@ console.log(data);
 
 ---
 
-## 63. 输出是什么?
+###### 63. 输出是什么?
 
 ```javascript
 let num = 10;
@@ -1931,7 +1936,7 @@ console.log(num2);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 一元操作符 `++` _先返回_ 操作值, _再累加_ 操作值。`num1`的值是`10`, 因为`increaseNumber`函数首先返回`num`的值，也就是`10`，随后再进行 `num`的累加。
 
@@ -1942,7 +1947,7 @@ console.log(num2);
 
 ---
 
-## 64. 输出什么?
+###### 64. 输出什么?
 
 ```javascript
 const value = { number: 10 };
@@ -1965,7 +1970,7 @@ multiply(value);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 在ES6中，我们可以使用默认值初始化参数。如果没有给函数传参，或者传的参值为 `"undefined"` ，那么参数的值将是默认值。上述例子中，我们将 `value` 对象进行了解构并传到一个新对象中，因此 `x` 的默认值为 `{number：10}` 。
 
@@ -1980,7 +1985,7 @@ multiply(value);
 
 ---
 
-## 65. 输出什么?
+###### 65. 输出什么?
 
 ```javascript
 [1, 2, 3, 4].reduce((x, y) => console.log(x, y));
@@ -1994,7 +1999,7 @@ multiply(value);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 `reducer` 函数接收4个参数:
 
@@ -2019,7 +2024,7 @@ multiply(value);
 
 ---
 
-## 66. 使用哪个构造函数可以成功继承`Dog`类?
+###### 66. 使用哪个构造函数可以成功继承`Dog`类?
 
 ```javascript
 class Dog {
@@ -2060,7 +2065,7 @@ class Labrador extends Dog {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 在子类中，在调用`super`之前不能访问到`this`关键字。 如果这样做，它将抛出一个`ReferenceError`：1和4将引发一个引用错误。
 
@@ -2072,7 +2077,7 @@ class Labrador extends Dog {
 
 ---
 
-## 67. 输出什么?
+###### 67. 输出什么?
 
 ```javascript
 // index.js
@@ -2093,7 +2098,7 @@ export const sum = (a, b) => a + b;
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 `import`命令是编译阶段执行的，在代码运行之前。因此这意味着被导入的模块会先运行，而导入模块的文件会后执行。
 
@@ -2104,7 +2109,7 @@ export const sum = (a, b) => a + b;
 
 ---
 
-## 68. 输出什么?
+###### 68. 输出什么?
 
 ```javascript
 console.log(Number(2) === Number(2))
@@ -2120,7 +2125,7 @@ console.log(Symbol('foo') === Symbol('foo'))
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 每个`Symbol`都是完全唯一的。传递给`Symbol`的参数只是给`Symbol`的一个描述。 `Symbol`的值不依赖于传递的参数。 当我们测试相等时，我们创建了两个全新的符号：第一个`Symbol（'foo'）`，第二个`Symbol（'foo'）`, 这两个值是唯一的，彼此不相等，因此返回`false`。
 
@@ -2129,7 +2134,7 @@ console.log(Symbol('foo') === Symbol('foo'))
 
 ---
 
-## 69. 输出什么?
+###### 69. 输出什么?
 
 ```javascript
 const name = "Lydia Hallie"
@@ -2145,7 +2150,7 @@ console.log(name.padStart(2))
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 使用`padStart`方法，我们可以在字符串的开头添加填充。传递给此方法的参数是字符串的总长度（包含填充）。字符串`Lydia Hallie`的长度为`12`, 因此`name.padStart（13）`在字符串的开头只会插入1（`13 - 12 = 1`）个空格。
 
@@ -2156,7 +2161,7 @@ console.log(name.padStart(2))
 
 ---
 
-## 70. 输出什么?
+###### 70. 输出什么?
 
 ```javascript
 console.log("🥑" + "💻");
@@ -2170,7 +2175,7 @@ console.log("🥑" + "💻");
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 使用`+`运算符，您可以连接字符串。 上述情况，我们将字符串`“🥑”`与字符串`”💻“`连接起来，产生`”🥑💻“`。
 
@@ -2179,7 +2184,7 @@ console.log("🥑" + "💻");
 
 ---
 
-## 71. 如何能打印出`console.log`语句后注释掉的值？
+###### 71. 如何能打印出`console.log`语句后注释掉的值？
 
 ```javascript
 function* startGame() {
@@ -2203,7 +2208,7 @@ console.log(/* 2 */); // JavaScript loves you back ❤️
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 `generator`函数在遇到`yield`关键字时会“暂停”其执行。 首先，我们需要让函数产生字符串`Do you love JavaScript?`，这可以通过调用`game.next().value`来完成。上述函数的第一行就有一个`yield`关键字，那么运行立即停止了，`yield`表达式本身没有返回值，或者说总是返回`undefined`, 这意味着此时变量 `答案` 为`undefined`
 
@@ -2214,7 +2219,7 @@ console.log(/* 2 */); // JavaScript loves you back ❤️
 
 ---
 
-## 72. 输出什么?
+###### 72. 输出什么?
 
 ```javascript
 console.log(String.raw`Hello\nworld`);
@@ -2228,7 +2233,7 @@ console.log(String.raw`Hello\nworld`);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 `String.raw`函数是用来获取一个模板字符串的原始字符串的，它返回一个字符串，其中忽略了转义符（`\n`，`\v`，`\t`等）。但反斜杠可能造成问题，因为你可能会遇到下面这种类似情况：
 
@@ -2254,7 +2259,7 @@ String.raw`C:\Documents\Projects\table.html`
 
 ---
 
-## 73. 输出什么?
+###### 73. 输出什么?
 
 ```javascript
 async function getData() {
@@ -2273,7 +2278,7 @@ console.log(data);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 异步函数始终返回一个promise。`await`仍然需要等待promise的解决：当我们调用`getData()`并将其赋值给`data`，此时`data`为`getData`方法返回的一个挂起的promise，该promise并没有解决。
 
@@ -2288,7 +2293,7 @@ console.log(data);
 
 ---
 
-## 74. 输出什么?
+###### 74. 输出什么?
 
 ```javascript
 function addToList(item, list) {
@@ -2307,7 +2312,7 @@ console.log(result);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 `push()`方法返回新数组的长度。一开始，数组包含一个元素（字符串`"banana"`），长度为1。 在数组中添加字符串`"apple"`后，长度变为2，并将从`addToList`函数返回。
 
@@ -2318,7 +2323,7 @@ console.log(result);
 
 ---
 
-## 75. 输出什么?
+###### 75. 输出什么?
 
 ```javascript
 const box = { x: 10, y: 20 };
@@ -2338,7 +2343,7 @@ console.log(shape)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 `Object.freeze`使得无法添加、删除或修改对象的属性（除非属性的值是另一个对象）。
 
@@ -2353,7 +2358,7 @@ console.log(shape)
 
 ---
 
-## 76. 输出什么?
+###### 76. 输出什么?
 
 ```javascript
 const { name: myName } = { name: "Lydia" };
@@ -2369,7 +2374,7 @@ console.log(name);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 当我们从右侧的对象解构属性`name`时，我们将其值`Lydia`分配给名为`myName`的变量。
 
@@ -2382,7 +2387,7 @@ console.log(name);
 
 ---
 
-## 77. 以下是个纯函数么?
+###### 77. 以下是个纯函数么?
 
 ```javascript
 function sum(a, b) {
@@ -2396,18 +2401,20 @@ function sum(a, b) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
-纯函数一种若输入参数相同，则永远会得到相同输出的函数。
+纯函数在相同的输入值时，需产生相同的输出，其输出的结果，与输入值以外的其他隐藏信息或状态无关，也和由I/O设备产生的外部输出无关。
+纯函数不会产生副作用。
 
-`sum`函数总是返回相同的结果。 如果我们传递`1`和`2`，它将总是返回`3`而没有副作用。 如果我们传递`5`和`10`，它将总是返回`15`，依此类推，这是纯函数的定义。
+纯函数与副作用的定义可参考：
+https://zh.wikipedia.org/wiki/%E5%89%AF%E4%BD%9C%E7%94%A8_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)
 
 </p>
 </details>
 
 ---
 
-## 78. 输出什么?
+###### 78. 输出什么?
 
 ```javascript
 const add = () => {
@@ -2437,7 +2444,7 @@ console.log(addFunction(5 * 2));
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 `add`函数是一个记忆函数。 通过记忆化，我们可以缓存函数的结果，以加快其执行速度。上述情况，我们创建一个`cache`对象，用于存储先前返回过的值。
 
@@ -2456,7 +2463,7 @@ console.log(addFunction(5 * 2));
 
 ---
 
-## <a name=20190726></a>79. 输出什么?
+###### <a name=20190726></a>79. 输出什么?
 
 ```javascript
 const myLifeSummedUp = ["☕", "💻", "🍷", "🍫"]
@@ -2478,7 +2485,7 @@ for (let item of myLifeSummedUp) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 通过`for-in`循环，我们可以遍历一个对象**自有的**、**继承的**、**可枚举的**、**非Symbol的**属性。 在数组中，可枚举属性是数组元素的“键”， 即它们的索引。 类似于下面这个对象：
 
@@ -2493,7 +2500,7 @@ for (let item of myLifeSummedUp) {
 
 ---
 
-## 80. 输出什么?
+###### 80. 输出什么?
 
 ```javascript
 const list = [1 + 2, 1 * 2, 1 / 2]
@@ -2508,7 +2515,7 @@ console.log(list)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 数组元素可以包含任何值。 数字，字符串，布尔值，对象，数组，`null`，`undeifned`, 以及其他表达式，如日期，函数和计算。
 
@@ -2519,7 +2526,7 @@ console.log(list)
 
 ---
 
-## 81. 输出什么?
+###### 81. 输出什么?
 
 ```javascript
 function sayHi(name) {
@@ -2537,7 +2544,7 @@ console.log(sayHi())
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 默认情况下，如果不给函数传参，参数的值将为`undefined`。 上述情况，我们没有给参数`name`传值。 `name`等于`undefined`，并被打印。
 
@@ -2552,7 +2559,7 @@ console.log(sayHi())
 
 ---
 
-## 82. 输出什么?
+###### 82. 输出什么?
 
 ```javascript
 var status = "😎"
@@ -2580,7 +2587,7 @@ setTimeout(() => {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 `this`关键字的指向取决于使用它的位置。 在**函数**中，比如`getStatus`，`this`指向的是调用它的对象，上述例子中`data`对象调用了`getStatus`，因此`this`指向的就是`data`对象。 当我们打印`this.status`时，`data`对象的`status`属性被打印，即`"🥑"`。
 
@@ -2590,7 +2597,7 @@ setTimeout(() => {
 
 ---
 
-## 83. 输出什么?
+###### 83. 输出什么?
 
 ```javascript
 const person = {
@@ -2612,7 +2619,7 @@ console.log(person)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 我们将变量`city`设置为等于`person`对象上名为`city`的属性的值。 这个对象上没有名为`city`的属性，因此变量`city`的值为`undefined`。
 
@@ -2627,7 +2634,7 @@ console.log(person)
 
 ---
 
-## 84. 输出什么?
+###### 84. 输出什么?
 
 ```javascript
 function checkAge(age) {
@@ -2651,7 +2658,7 @@ console.log(checkAge(21))
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 `const`和`let`声明的变量是具有**块级作用域**的，块是大括号（`{}`）之间的任何东西, 即上述情况`if / else`语句的花括号。 由于块级作用域，我们无法在声明的块之外引用变量，因此抛出`ReferenceError`。
 
@@ -2660,7 +2667,7 @@ console.log(checkAge(21))
 
 ---
 
-## 85. 什么样的信息将被打印?
+###### 85. 什么样的信息将被打印?
 
 ```javascript
 fetch('https://www.website.com/api/user/1')
@@ -2676,7 +2683,7 @@ fetch('https://www.website.com/api/user/1')
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 第二个`.then`中`res`的值等于前一个`.then`中的回调函数返回的值。 你可以像这样继续链接`.then`，将值传递给下一个处理程序。
 
@@ -2685,7 +2692,7 @@ fetch('https://www.website.com/api/user/1')
 
 ---
 
-## 86. 哪个选项是将`hasName`设置为`true`的方法，前提是不能将`true`作为参数传递?
+###### 86. 哪个选项是将`hasName`设置为`true`的方法，前提是不能将`true`作为参数传递?
 
 ```javascript
 function getName(name) {
@@ -2701,7 +2708,7 @@ function getName(name) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 使用逻辑非运算符`!`，将返回一个布尔值，使用`!! name`，我们可以确定`name`的值是真的还是假的。 如果`name`是真实的，那么`!name`返回`false`。 `!false`返回`true`。
 
@@ -2714,7 +2721,7 @@ function getName(name) {
 </p>
 </details>
 
-## 87. 输出什么?
+###### 87. 输出什么?
 
 ```javascript
 console.log("I want pizza"[0])
@@ -2728,7 +2735,7 @@ console.log("I want pizza"[0])
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 可以使用方括号表示法获取字符串中特定索引的字符，字符串中的第一个字符具有索引0，依此类推。 在这种情况下，我们想要得到索引为0的元素，字符`'I'`被记录。
 
@@ -2739,7 +2746,7 @@ console.log("I want pizza"[0])
 
 ---
 
-## 88. 输出什么?
+###### 88. 输出什么?
 
 ```javascript
 function sum(num1, num2 = num1) {
@@ -2757,7 +2764,7 @@ sum(10)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 您可以将默认参数的值设置为函数的另一个参数，只要另一个参数定义在其之前即可。 我们将值`10`传递给`sum`函数。 如果`sum`函数只接收1个参数，则意味着没有传递`num2`的值，这种情况下，`num1`的值等于传递的值`10`。 `num2`的默认值是`num1`的值，即`10`。 ```num1 + num2```返回`20`。
 
@@ -2776,7 +2783,7 @@ test(3, 4) // 3 4
 
 ---
 
-## 89. 输出什么?
+###### 89. 输出什么?
 
 ```javascript
 // module.js 
@@ -2797,7 +2804,7 @@ console.log(data)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 使用`import * as name`语法，我们将`module.js`文件中所有`export`导入到`index.js`文件中，并且创建了一个名为`data`的新对象。 在`module.js`文件中，有两个导出：默认导出和命名导出。 默认导出是一个返回字符串“Hello World”的函数，命名导出是一个名为`name`的变量，其值为字符串`“Lydia”`。
 
@@ -2808,7 +2815,7 @@ console.log(data)
 
 ---
 
-## 90. 输出什么?
+###### 90. 输出什么?
 
 ```javascript
 class Person {
@@ -2829,7 +2836,7 @@ console.log(typeof member)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 类是构造函数的语法糖，如果用构造函数的方式来重写`Person`类则将是：
 
@@ -2846,7 +2853,7 @@ function Person() {
 
 ---
 
-## 91. 输出什么?
+###### 91. 输出什么?
 
 ```javascript
 let newList = [1, 2, 3].push(4)
@@ -2862,7 +2869,7 @@ console.log(newList.push(5))
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 `.push`方法返回数组的长度，而不是数组本身！ 通过将`newList`设置为`[1,2,3].push(4)`，实际上`newList`等于数组的新长度：`4`。
 
@@ -2873,7 +2880,7 @@ console.log(newList.push(5))
 
 ---
 
-## 92. 输出什么?
+###### 92. 输出什么?
 
 ```javascript
 function giveLydiaPizza() {
@@ -2894,7 +2901,7 @@ console.log(giveLydiaChocolate.prototype)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 常规函数，例如`giveLydiaPizza`函数，有一个`prototype`属性，它是一个带有`constructor`属性的对象（原型对象）。 然而，箭头函数，例如`giveLydiaChocolate`函数，没有这个`prototype`属性。 尝试使用`giveLydiaChocolate.prototype`访问`prototype`属性时会返回`undefined`。
 
@@ -2903,7 +2910,7 @@ console.log(giveLydiaChocolate.prototype)
 
 ---
 
-## 93. 输出什么?
+###### 93. 输出什么?
 
 ```javascript
 const person = {
@@ -2924,7 +2931,7 @@ for (const [x, y] of Object.entries(person)) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 `Object.entries()`方法返回一个给定对象自身可枚举属性的键值对数组，上述情况返回一个二维数组，数组每个元素是一个包含键和值的数组：
 
 `[['name'，'Lydia']，['age'，21]]`
@@ -2939,7 +2946,7 @@ for (const [x, y] of Object.entries(person)) {
 
 ---
 
-## 94. 输出什么?
+###### 94. 输出什么?
 
 ```javascript
 function getItems(fruitList, ...args, favoriteFruit) {
@@ -2957,7 +2964,7 @@ getItems(["banana", "apple"], "pear", "orange")
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 `... args`是剩余参数，剩余参数的值是一个包含所有剩余参数的数组，**并且只能作为最后一个参数**。上述示例中，剩余参数是第二个参数，这是不可能的，并会抛出语法错误。
 
@@ -2975,7 +2982,7 @@ getItems(["banana", "apple"], "pear", "orange")
 
 ---
 
-## <a name=20190817></a>95. 输出什么?
+###### <a name=20190817></a>95. 输出什么?
 
 ```javascript
 function nums(a, b) {
@@ -3000,7 +3007,7 @@ console.log(nums(1, 2))
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 
 在JavaScript中，我们不必显式地编写分号(`;`)，但是JavaScript引擎仍然在语句之后自动添加分号。这称为**自动分号插入**。例如，一个语句可以是变量，或者像`throw`、`return`、`break`这样的关键字。
@@ -3019,7 +3026,7 @@ console.log(nums(1, 2))
 
 ---
 
-## 96. 输出什么?
+###### 96. 输出什么?
 
 ```javascript
 class Person {
@@ -3046,7 +3053,7 @@ console.log(member.name)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 
 我们可以将类设置为等于其他类/函数构造函数。 在这种情况下，我们将`Person`设置为`AnotherPerson`。 这个构造函数的名字是`Sarah`，所以新的`Person`实例`member`上的name属性是`Sarah`。
@@ -3057,7 +3064,7 @@ console.log(member.name)
 
 ---
 
-## 97. 输出什么?
+###### 97. 输出什么?
 
 ```javascript
 const info = {
@@ -3076,7 +3083,7 @@ console.log(Object.keys(info))
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 
 `Symbol`类型是不可枚举的。`Object.keys`方法返回对象上的所有可枚举的键属性。`Symbol`类型是不可见的，并返回一个空数组。 记录整个对象时，所有属性都是可见的，甚至是不可枚举的属性。
@@ -3088,7 +3095,7 @@ console.log(Object.keys(info))
 
 ---
 
-## 98. 输出什么?
+###### 98. 输出什么?
 
 ```javascript
 const getList = ([x, ...y]) => [x, y]
@@ -3101,7 +3108,7 @@ console.log(getList(list))
 console.log(getUser(user))
 ```
 
-- A: `[1, [2, 3, 4]]` and `undefined`
+- A: `[1, [2, 3, 4]]` and `SyntaxError`
 - B: `[1, [2, 3, 4]]` and `{ name: "Lydia", age: 21 }`
 - C: `[1, 2, 3, 4]` and `{ name: "Lydia", age: 21 }`
 - D: `Error` and `{ name: "Lydia", age: 21 }`
@@ -3109,7 +3116,7 @@ console.log(getUser(user))
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 `getList`函数接收一个数组作为其参数。 在`getList`函数的括号之间，我们立即解构这个数组。 您可以将其视为：
 
@@ -3118,18 +3125,18 @@ console.log(getUser(user))
 
 使用剩余的参数`... y`，我们将所有剩余参数放在一个数组中。 在这种情况下，其余的参数是`2`，`3`和`4`。 `y`的值是一个数组，包含所有其余参数。 在这种情况下，`x`的值等于`1`，所以当我们打印`[x，y]`时，会打印`[1，[2,3,4]]`。
 
- `getUser`函数接收一个对象。对于箭头函数，如果只返回一个值，我们不必编写花括号。但是，如果您想从一个箭头函数返回一个对象，您必须在圆括号之间编写它，否则不会返回任何值!下面的函数将返回一个对象:
+ `getUser`函数接收一个对象。对于箭头函数，如果只返回一个值，我们不必编写花括号。但是，如果您想从一个箭头函数返回一个对象，您必须将它写在圆括号之间，否则两个花括号之间的所有内容都将被解释为一个块语句!在这种情况下，花括号之间的代码不是有效的 JavaScript 代码，因此会抛出SyntaxError。
 
-```const getUser = user => ({ name: user.name, age: user.age })```
+以下函数将返回一个对象：
 
-由于在这种情况下不返回任何值，因此该函数返回`undefined`。
+`const getUser = user => ({ name: user.name, age: user.age })`
 
 </p>
 </details>
 
 ---
 
-## 99. 输出什么?
+###### 99. 输出什么?
 
 ```javascript
 const name = "Lydia"
@@ -3145,7 +3152,7 @@ console.log(name())
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 
 变量`name`保存字符串的值，该字符串不是函数，因此无法调用。
@@ -3160,7 +3167,7 @@ console.log(name())
 
 ---
 
-## 100. 输出什么?
+###### 100. 输出什么?
 
 ```javascript
 // 🎉✨ This is my 100th question! ✨🎉
@@ -3177,7 +3184,7 @@ You should${'' && `n't`} see a therapist after so much JavaScript lol`
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 
 `[]`是一个真值。 使用`&&`运算符，如果左侧值是真值，则返回右侧值。 在这种情况下，左侧值`[]`是一个真值，所以返回`Im`。
@@ -3189,7 +3196,7 @@ You should${'' && `n't`} see a therapist after so much JavaScript lol`
 
 ---
 
-## 101.输出什么?
+###### 101.输出什么?
 
 ```javascript
 const one = (false || {} || null)
@@ -3207,7 +3214,7 @@ console.log(one, two, three)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 使用`||`运算符，我们可以返回第一个真值。 如果所有值都是假值，则返回最后一个值。
 
@@ -3222,7 +3229,7 @@ console.log(one, two, three)
 
 ---
 
-## 102. 依次输出什么?
+###### 102. 依次输出什么?
 
 ```javascript
 const myPromise = () => Promise.resolve('I have resolved!')
@@ -3249,7 +3256,7 @@ secondFunction()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 
 有了promise，我们通常会说：当我想要调用某个方法，但是由于它可能需要一段时间，因此暂时将它放在一边。只有当某个值被resolved/rejected，并且执行栈为空时才使用这个值。
@@ -3266,7 +3273,7 @@ secondFunction()
 
 ---
 
-## 103. 输出什么?
+###### 103. 输出什么?
 
 ```javascript
 const set = new Set()
@@ -3288,7 +3295,7 @@ for (let item of set) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 “+”运算符不仅用于添加数值，还可以使用它来连接字符串。 每当JavaScript引擎发现一个或多个值不是数字时，就会将数字强制为字符串。 
 
@@ -3303,7 +3310,7 @@ for (let item of set) {
 
 ---
 
-## 104. 结果是什么?
+###### 104. 结果是什么?
 
 ```javascript
 Promise.resolve(5)
@@ -3311,15 +3318,15 @@ Promise.resolve(5)
 
 - A: `5`
 - B: `Promise {<pending>: 5}`
-- C: `Promise {<resolved>: 5}`
+- C: `Promise {<fulfilled>: 5}`
 - D: `Error`
 
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
-我们可以将我们想要的任何类型的值传递`Promise.resolve`，无论是否`promise`。 该方法本身返回带有已解析值的`Promise`。 如果您传递常规函数，它将是具有常规值的已解决`promise`。 如果你通过了promise，它将是一个已经resolved的且带有传的值的promise。
+我们可以将我们想要的任何类型的值传递`Promise.resolve`，无论是否`promise`。 该方法本身返回带有已解析值的`Promise` (`<fulfilled>`)。 如果您传递常规函数，它将是具有常规值的已解决`promise`。 如果你通过了promise，它将是一个已经resolved的且带有传的值的promise。
 
 上述情况，我们传了数字5，因此返回一个resolved状态的promise，resolve值为`5`
 
@@ -3327,7 +3334,7 @@ Promise.resolve(5)
 </details>
 
 
-## 105. 输出什么?
+###### 105. 输出什么?
 
 ```javascript
 function compareMembers(person1, person2 = person) {
@@ -3351,7 +3358,7 @@ compareMembers(person)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 对象通过引用传递。 当我们检查对象的严格相等性（===）时，我们正在比较它们的引用。
 
@@ -3366,7 +3373,7 @@ compareMembers(person)
 
 ---
 
-## 106. 输出什么?
+###### 106. 输出什么?
 
 
 ```javascript
@@ -3391,7 +3398,7 @@ console.log(colorConfig.colors[1])
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 在JavaScript中，我们有两种访问对象属性的方法：括号表示法或点表示法。 在此示例中，我们使用点表示法（`colorConfig.colors`）代替括号表示法（`colorConfig [“ colors”]`）。
 
@@ -3406,7 +3413,7 @@ JavaScript解释（或取消装箱）语句。 当我们使用方括号表示法
 
 ---
 
-## 107. 输出什么?
+###### 107. 输出什么?
 
 ```javascript
 console.log('❤️' === '❤️')
@@ -3418,7 +3425,7 @@ console.log('❤️' === '❤️')
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 在内部，表情符号是unicode。 heat表情符号的unicode是`“ U + 2764 U + FE0F”`。 对于相同的表情符号，它们总是相同的，因此我们将两个相等的字符串相互比较，这将返回true。
 
@@ -3427,7 +3434,7 @@ console.log('❤️' === '❤️')
 
 ---
 
-## 108. 哪些方法修改了原数组?
+###### 108. 哪些方法修改了原数组?
 
 
 ```javascript
@@ -3449,7 +3456,7 @@ emojis.splice(1, 2, '✨')
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 使用`splice`方法，我们通过删除，替换或添加元素来修改原始数组。 在这种情况下，我们从索引1中删除了2个元素（我们删除了`'🥑'`和`'😍'`），同时添加了✨emoji表情。
 
@@ -3460,7 +3467,7 @@ emojis.splice(1, 2, '✨')
 
 ---
 
-## <a name=20191009></a>109. 输出什么?
+###### <a name=20191009></a>109. 输出什么?
 
 ```javascript
 const food = ['🍕', '🍫', '🥑', '🍔']
@@ -3479,7 +3486,7 @@ console.log(food)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 我们将`info`对象上的`favoriteFood`属性的值设置为披萨表情符号“🍕”的字符串。字符串是原始数据类型。在JavaScript中，原始数据类型通过值起作用
 
@@ -3490,7 +3497,7 @@ console.log(food)
 
 ---
 
-## 110. 这个函数干了什么?
+###### 110. 这个函数干了什么?
 
 ```javascript
 JSON.parse()
@@ -3504,7 +3511,7 @@ JSON.parse()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 使用`JSON.parse()`方法，我们可以将JSON字符串解析为JavaScript值。
 
@@ -3527,7 +3534,7 @@ JSON.parse(jsonArray) // { name: 'Lydia' }
 
 ---
 
-## 111. 输出什么? 
+###### 111. 输出什么? 
 
 ```javascript
 let name = 'Lydia'
@@ -3548,13 +3555,13 @@ getName()
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D 
+#### 答案: D 
 
 每个函数都有其自己的执行上下文。 `getName`函数首先在其自身的上下文（范围）内查找，以查看其是否包含我们尝试访问的变量`name`。 上述情况，`getName`函数包含其自己的`name`变量：我们用`let`关键字和`Sarah`的值声明变量`name`。
 
 带有`let`关键字（和`const`）的变量被提升，但是与`var`不同，它不会被***初始化***。 在我们声明（初始化）它们之前，无法访问它们。 这称为“暂时性死区”。 当我们尝试在声明变量之前访问变量时，JavaScript会抛出`ReferenceError: Cannot access 'name' before initialization`。
 
-如果我们不在`getName`函数中声明`name`变量，则javascript引擎会查看原型练。会找到其外部作用域有一个名为`name`的变量，其值为`Lydia`。 在这种情况下，它将打印`Lydia`：
+如果我们不在`getName`函数中声明`name`变量，则javascript引擎会查看原型链。会找到其外部作用域有一个名为`name`的变量，其值为`Lydia`。 在这种情况下，它将打印`Lydia`：
 
 ```javascript
 let name = 'Lydia'
@@ -3571,7 +3578,7 @@ getName() // Lydia
 
 ---
 
-## 112. 输出什么？
+###### 112. 输出什么？
 
 ```javascript
 function* generatorOne() {
@@ -3597,7 +3604,7 @@ console.log(two.next().value)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 通过 `yield` 关键字, 我们在 `Generator` 函数里执行`yield`表达式. 通过 `yield*` 关键字, 我们可以在一个`Generator` 函数里面执行（`yield`表达式）另一个 `Generator` 函数, 或可遍历的对象 (如数组).
 
@@ -3622,7 +3629,7 @@ console.log(two.next().value) // undefined
 
 ---
 
-## 113. 输出什么？
+###### 113. 输出什么？
 
 ```javascript
 console.log(`${(x => x)('I love')} to program`)
@@ -3636,7 +3643,7 @@ console.log(`${(x => x)('I love')} to program`)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 带有模板字面量的表达式首先被执行。相当于字符串会包含表达式，这个立即执行函数 `(x => x)('I love')` 返回的值. 我们向箭头函数 `x => x` 传递 `'I love'` 作为参数。`x` 等价于返回的 `'I love'`。这就是结果 `I love to program`。
 
@@ -3645,7 +3652,7 @@ console.log(`${(x => x)('I love')} to program`)
 
 ---
 
-## 114. 将会发生什么?
+###### 114. 将会发生什么?
 
 ```javascript
 let config = {
@@ -3665,7 +3672,7 @@ config = null
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 一般情况下当我们将对象赋值为 `null`, 那些对象会被进行 _垃圾回收（garbage collected）_ 因为已经没有对这些对象的引用了。然而，`setInterval`的参数是一个箭头函数（所以上下文绑定到对象 `config` 了），回调函数仍然保留着对 `config`的引用。只要存在引用，对象就不会被垃圾回收。因为没有被垃圾回收，`setInterval` 的回调每1000ms (1s)会被调用一次。
 
@@ -3674,7 +3681,7 @@ config = null
 
 ---
 
-## 115. 哪一个方法会返回 `'Hello world!'` ？
+###### 115. 哪一个方法会返回 `'Hello world!'` ？
 
 ```javascript
 const myMap = new Map()
@@ -3698,7 +3705,7 @@ myMap.get(() => 'greeting')
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 当通过 `set` 方法添加一个键值对，一个传递给 `set`方法的参数将会是键名，第二个参数将会是值。在这个case里，键名为 _函数_ `() => 'greeting'`，值为`'Hello world'`。 `myMap` 现在就是 `{ () => 'greeting' => 'Hello world!' }`。
 
@@ -3710,7 +3717,7 @@ myMap.get(() => 'greeting')
 
 ---
 
-## 116. 输出什么？
+###### 116. 输出什么？
 
 ```javascript
 const person = {
@@ -3738,7 +3745,7 @@ console.log(person)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 函数 `changeAge` 和函数 `changeAgeAndName` 有着不同的参数，定义一个 _新_ 生成的对象 `{ ...person }`。这个对象有着所有 `person` 对象 中 k/v 值的副本。
 
@@ -3751,7 +3758,7 @@ console.log(person)
 
 ---
 
-## 117. 下面那个选项将会返回 `6`?
+###### 117. 下面那个选项将会返回 `6`?
 
 ```javascript
 function sumValues(x, y, z) {
@@ -3767,7 +3774,7 @@ function sumValues(x, y, z) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 通过展开操作符 `...`，我们可以 _暂开_ 单个可迭代的元素。函数 `sumValues` function 接收三个参数： `x`, `y` 和 `z`。`...[1, 2, 3]` 的执行结果为 `1, 2, 3`，将会传递给函数 `sumValues`。
 
@@ -3776,7 +3783,7 @@ function sumValues(x, y, z) {
 
 ---
 
-## 118. 输出什么？
+###### 118. 输出什么？
 
 ```javascript
 let num = 1;
@@ -3793,7 +3800,7 @@ console.log(list[(num += 1)]);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 通过 `+=` 操作符，我们对值 `num` 进行加 `1` 操作。 `num` 有初始值 `1`，因此 `1 + 1` 的执行结果为 `2`。数组 `list` 的第二项为 🥰，`console.log(list[2])` 输出 🥰.
 
@@ -3802,7 +3809,7 @@ console.log(list[(num += 1)]);
 
 ---
 
-## 119. 输出什么？
+###### 119. 输出什么？
 
 ```javascript
 const person = {
@@ -3824,28 +3831,28 @@ console.log(member.getLastName?.());
 ```
 
 - A: `undefined` `undefined` `undefined` `undefined`
-- B: `Mara` `undefined` `Lydia Hallie` `undefined`
+- B: `Mara` `undefined` `Lydia Hallie` `ReferenceError`
 - C: `Mara` `null` `Lydia Hallie` `null`
 - D: `null` `ReferenceError` `null` `ReferenceError`
 
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 通过 ES10 或 TS3.7+[可选链操作符 `?.`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/%E5%8F%AF%E9%80%89%E9%93%BE)，我们不再需要显式检测更深层的嵌套值是否有效。如果我们尝试获取 `undefined` 或 `null` 的值 (_nullish_)，表达将会短路并返回 `undefined`.
 
 `person.pet?.name`： `person` 有一个名为 `pet` 的属性： `person.pet` 不是 nullish。它有个名为 `name` 的属性，并返回字符串 `Mara`。
 `person.pet?.family?.name`： `person` 有一个名为 `pet` 的属性： `person.pet` 不是 nullish. `pet` _并没有_ 一个名为 `family` 的属性, `person.pet.family` 是 nullish。表达式返回 `undefined`。
 `person.getFullName?.()`： `person` 有一个名为 `getFullName` 的属性： `person.getFullName()` 不是 nullish 并可以被调用，返回字符串 `Lydia Hallie`。
-`member.getLastName?.()`: `member` is not defined: `member.getLastName()` is nullish. The expression returns `undefined`.
+`member.getLastName?.()`: 变量`member` 不存在，因此会抛出错误`ReferenceError`。
 
 </p>
 </details>
 
 ---
 
-## 120. 输出什么？
+###### 120. 输出什么？
 
 ```javascript
 const groceries = ["banana", "apple", "peanuts"];
@@ -3865,7 +3872,7 @@ if (groceries.indexOf("banana")) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 我们传递了一个状态 `groceries.indexOf("banana")` 给if条件语句。`groceries.indexOf("banana")` 返回 `0`， 一个 falsy 的值。因为if条件语句的状态为 falsy，`else` 块区内的代码执行，并且 `We don't have to buy bananas!` 被输出.
 
@@ -3874,7 +3881,7 @@ if (groceries.indexOf("banana")) {
 
 ---
 
-## 121. 输出什么?
+###### 121. 输出什么?
 
 ```javascript
 const config = {
@@ -3895,7 +3902,7 @@ console.log(config.language);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 方法 `language` 是一个 `setter`。Setters 并不保存一个实际值，它们的使命在于 _修改_ 属性。当调用方法 `setter`， 返回 `undefined`。
 
@@ -3904,7 +3911,7 @@ console.log(config.language);
 
 ---
 
-## 122. 输出什么？
+###### 122. 输出什么？
 
 ```javascript
 const name = "Lydia Hallie";
@@ -3921,7 +3928,7 @@ console.log(!typeof name === "string");
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 `typeof name` 返回 `"string"`。字符串 `"string"` 是一个 truthy 的值，因此 `!typeof name` 返回一个布尔值 `false`。 `false === "object"` 和 `false === "string"` 都返回 `false`。
 
@@ -3932,7 +3939,7 @@ console.log(!typeof name === "string");
 
 ---
 
-## 123. 输出什么?
+###### 123. 输出什么?
 
 ```javascript
 const add = x => y => z => {
@@ -3951,7 +3958,7 @@ add(4)(5)(6);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 函数 `add` 是一个返回 返回箭头函数的箭头函数 的箭头函数（still with me?）。第一个函数接收一个值为 `4` 的参数 `x`。我们调用第二个函数，它接收一个值为 `5` 的参数 `y`。然后我们调用第三个函数，它接收一个值为 `6` 的参数 `z`。当我们尝试在最后一个箭头函数中获取 `x`, `y` 和 `z` 的值，JS 引擎根据作用域链去找 `x` 和 `y` 的值。得到 `4` `5` `6`.
 
@@ -3960,7 +3967,7 @@ add(4)(5)(6);
 
 ---
 
-## 124. 输出什么？
+###### 124. 输出什么？
 
 ```javascript
 async function* range(start, end) {
@@ -3985,7 +3992,7 @@ async function* range(start, end) {
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 我们给 函数range 传递： `Promise{1}`, `Promise{2}`, `Promise{3}`，Generator 函数 `range` 返回一个全是 async object promise 数组。我们将 async object 赋值给变量 `gen`，之后我们使用`for await ... of` 进行循环遍历。我们将返回的 Promise 实例赋值给 `item`： 第一个返回 `Promise{1}`， 第二个返回 `Promise{2}`，之后是 `Promise{3}`。因为我们正 _awaiting_ `item` 的值，resolved 状态的 promsie，promise数组的resolved _值_ 以此为： `1`，`2`，`3`.
 
@@ -3994,7 +4001,7 @@ async function* range(start, end) {
 
 ---
 
-## 125. 输出什么？
+###### 125. 输出什么？
 
 ```javascript
 const myFunc = ({ x, y, z }) => {
@@ -4012,7 +4019,7 @@ myFunc(1, 2, 3);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 `myFunc` 期望接收一个包含 `x`, `y` 和 `z` 属性的对象作为它的参数。因为我们仅仅传递三个单独的数字值 (1, 2, 3) 而不是一个含有 `x`, `y` 和 `z` 属性的对象 ({x: 1, y: 2, z: 3})， `x`, `y` 和 `z` 有着各自的默认值 `undefined`.
 
@@ -4021,19 +4028,19 @@ myFunc(1, 2, 3);
 
 ---
 
-## 126. 输出什么？
+###### 126. 输出什么？
 
 ```javascript
 function getFine(speed, amount) {
-  const formattedSpeed = new Intl.NumberFormat({
+  const formattedSpeed = new Intl.NumberFormat(
     'en-US',
     { style: 'unit', unit: 'mile-per-hour' }
-  }).format(speed)
+  ).format(speed)
 
-  const formattedAmount = new Intl.NumberFormat({
+  const formattedAmount = new Intl.NumberFormat(
     'en-US',
     { style: 'currency', currency: 'USD' }
-  }).format(amount)
+  ).format(amount)
 
   return `The driver drove ${formattedSpeed} and has to pay ${formattedAmount}`
 }
@@ -4049,7 +4056,7 @@ console.log(getFine(130, 300))
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 通过方法 `Intl.NumberFormat`，我们可以格式化任意区域的数字值。我们对数字值 `130` 进行 `mile-per-hour` 作为 `unit` 的 `en-US` 区域 格式化，结果为 `130 mph`。对数字值 `300` 进行 `USD` 作为 `currentcy` 的 `en-US` 区域格式化，结果为 `$300.00`.
 
@@ -4058,7 +4065,7 @@ console.log(getFine(130, 300))
 
 ---
 
-## 127. 输出什么？
+###### 127. 输出什么？
 
 ```javascript
 const spookyItems = ["👻", "🎃", "🕸"];
@@ -4075,7 +4082,7 @@ console.log(spookyItems);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 通过解构对象们，我们可以从右手边的对象中拆出值，并且将拆出的值分配给左手边对象同名的属性。在这种情况下，我们将值 "💀" 分配给 `spookyItems[3]`。相当于我们正在篡改数组 `spookyItems`，我们给它添加了值 "💀"。当输出 `spookyItems` 时，结果为 `["👻", "🎃", "🕸", "💀"]`。
 
@@ -4084,7 +4091,7 @@ console.log(spookyItems);
 
 ---
 
-## 128. 输出什么？
+###### 128. 输出什么？
 
 ```javascript
 const name = "Lydia Hallie";
@@ -4105,7 +4112,7 @@ console.log(isNaN(age));
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 通过方法 `Number.isNaN`，你可以检测你传递的值是否为 _数字值_ 并且是否等价于 `NaN`。`name` 不是一个数字值，因此 `Number.isNaN(name)` 返回 `false`。`age` 是一个数字值，但它不等价于 `NaN`，因此 `Number.isNaN(age)` 返回 `false`.
 
@@ -4116,7 +4123,7 @@ console.log(isNaN(age));
 
 ---
 
-## 129. 输出什么？
+###### 129. 输出什么？
 
 ```javascript
 const randomValue = 21;
@@ -4137,16 +4144,16 @@ getInfo();
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
-通过 `const` 关键字声明的变量在被初始化之前不可被引用：这被称之为 _暂时性死去_。在函数 `getInfo` 中, 变量 `randomValue` 声明在`getInfo` 的作用域的此法环境中。在想要对 `typeof randomValue` 进行log之前，变量 `randomValue` 仍未被初始化： 错误`ReferenceError` 被抛出! JS引擎并不会根据作用域链网上寻找该变量，因为我们已经在 `getInfo` 函数中声明了 `randomValue` 变量。
+通过 `const` 关键字声明的变量在被初始化之前不可被引用：这被称之为 _暂时性死区_。在函数 `getInfo` 中, 变量 `randomValue` 声明在`getInfo` 的作用域的此法环境中。在想要对 `typeof randomValue` 进行log之前，变量 `randomValue` 仍未被初始化： 错误`ReferenceError` 被抛出! JS引擎并不会根据作用域链网上寻找该变量，因为我们已经在 `getInfo` 函数中声明了 `randomValue` 变量。
 
 </p>
 </details>
 
 ---
 
-## 130. 输出什么？
+###### 130. 输出什么？
 
 ```javascript
 const myPromise = Promise.resolve("Woah some cool data");
@@ -4170,7 +4177,7 @@ const myPromise = Promise.resolve("Woah some cool data");
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 在 `try` 块区，我们打印 `myPromise` 变量的 awaited 值： `"Woah some cool data"`。因为`try` 块区没有错误抛出，`catch` 块区的代码并不执行。`finally` 块区的代码 _总是_ 执行，`"Oh finally!"` 被输出。
 
@@ -4179,7 +4186,7 @@ const myPromise = Promise.resolve("Woah some cool data");
 
 ---
 
-## 131. 输出什么？
+###### 131. 输出什么？
 
 ```javascript
 const emojis = ["🥑", ["✨", "✨", ["🍕", "🍕"]]];
@@ -4195,7 +4202,7 @@ console.log(emojis.flat(1));
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 通过方法 `flat`， 我们可以创建一个新的, 已被扁平化的数组。被扁平化的深度取决于我们传递的值。在这个case里，我们传递了值 `1` (并不必要，这是默认值)，相当于只有第一层的数组才会被连接。即这个 case 里的 `['🥑']` and `['✨', '✨', ['🍕', '🍕']]`。连接这两个数组得到结果 `['🥑', '✨', '✨', ['🍕', '🍕']]`.
 
@@ -4204,7 +4211,7 @@ console.log(emojis.flat(1));
 
 ---
 
-## <a name=20191224></a>132. 输出什么？
+###### <a name=20191224></a>132. 输出什么？
 
 ```javascript
 class Counter {
@@ -4235,7 +4242,7 @@ console.log(counterOne.count);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 `counterOne` 是类 `Counter` 的一个实例。类 Counter 包含一个`count` 属性在它的构造函数里， 和一个 `increment` 方法。首先，我们通过 `counterOne.increment()` 调用方法 `increment` 两次。现在, `counterOne.count` 为 `2`.
 
@@ -4252,21 +4259,21 @@ console.log(counterOne.count);
 
 ---
 
-## 133. 输出什么？
+###### 133. 输出什么？
 
 ```javascript
 const myPromise = Promise.resolve(Promise.resolve("Promise!"));
 
 function funcOne() {
 	myPromise.then(res => res).then(res => console.log(res));
-	setTimeout(() => console.log("Timeout!", 0));
+	setTimeout(() => console.log("Timeout!"), 0);
 	console.log("Last line!");
 }
 
 async function funcTwo() {
 	const res = await myPromise;
 	console.log(await res);
-	setTimeout(() => console.log("Timeout!", 0));
+	setTimeout(() => console.log("Timeout!"), 0);
 	console.log("Last line!");
 }
 
@@ -4282,7 +4289,7 @@ funcTwo();
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 首先，我们调用 `funcOne`。在函数 `funcOne` 的第一行，我们调用`myPromise` promise _异步操作_。当JS引擎在忙于执行 promise，它继续执行函数 `funcOne`。下一行 _异步操作_ `setTimeout`，其回调函数被 Web API 调用。 (详情请参考我关于event loop的文章.)
 
@@ -4299,7 +4306,7 @@ promise 和 timeout 都是异步操作，函数继续执行当JS引擎忙于执�
 
 ---
 
-## 134. 我们怎样才能在 `index.js` 中调用 `sum.js?` 中的 `sum`？
+###### 134. 我们怎样才能在 `index.js` 中调用 `sum.js?` 中的 `sum`？
 
 ```javascript
 // sum.js
@@ -4319,7 +4326,7 @@ import * as sum from "./sum";
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 使用符号 `*`，我们引入文件中的所有值，包括默认和具名。如果我们有以下文件：
 
@@ -4357,7 +4364,7 @@ console.log(info);
 
 ---
 
-## 135. 输出什么？
+###### 135. 输出什么？
 
 ```javascript
 const handler = {
@@ -4379,9 +4386,9 @@ person.name;
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
-使用 Proxy 对象，我们可以给一个对象添加自定义行为。在这个 case，我们传递一个包含以下属性的对象 `handler` : `set` and `get`。每当我门 _设置_ 属性值时 `set` 被调用，每当我们 _获取_ 时 `get` 被调用。
+使用 Proxy 对象，我们可以给一个对象添加自定义行为。在这个 case，我们传递一个包含以下属性的对象 `handler` : `set` and `get`。每当我们 _设置_ 属性值时 `set` 被调用，每当我们 _获取_ 时 `get` 被调用。
 
 第一个参数是一个空对象 `{}`，作为 `person` 的值。对于这个对象，自定义行为被定义在对象 `handler`。如果我们向对象 `person` 添加属性，`set` 将被调用。如果我们获取 `person` 的属性, `get` 将被调用。
 
@@ -4394,7 +4401,7 @@ person.name;
 
 ---
 
-## 136. 以下哪一项会对对象 `person` 有副作用？
+###### 136. 以下哪一项会对对象 `person` 有副作用？
 
 ```javascript
 const person = { name: "Lydia Hallie" };
@@ -4410,7 +4417,7 @@ Object.seal(person);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 使用 `Object.seal` 我们可以防止新属性 _被添加_，或者存在属性 _被移除_.
 
@@ -4421,7 +4428,7 @@ Object.seal(person);
 
 ---
 
-## 137. 以下哪一项会对对象 `person` 有副作用？
+###### 137. 以下哪一项会对对象 `person` 有副作用？
 
 ```javascript
 const person = {
@@ -4442,7 +4449,7 @@ Object.freeze(person);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 使用方法 `Object.freeze` 对一个对象进行 _冻结_。不能对属性进行添加，修改，删除。
 
@@ -4453,7 +4460,7 @@ Object.freeze(person);
 
 ---
 
-## 138. 输出什么？
+###### 138. 输出什么？
 
 ```javascript
 const add = x => x + x;
@@ -4474,7 +4481,7 @@ myFunc(3);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: A
+#### 答案: A
 
 首先我们不传递任何参数调用 `myFunc()`。因为我们没有传递参数，`num` 和 `value` 获取它们各自的默认值：num 为 `2`, 而 `value` 为函数 `add` 的返回值。对于函数 `add`，我们传递值为2的 `num` 作为参数。函数 `add` 返回 `4` 作为 `value` 的值。
 
@@ -4485,7 +4492,7 @@ myFunc(3);
 
 ---
 
-## 139. 输出什么？
+###### 139. 输出什么？
 
 ```javascript
 class Counter {
@@ -4514,7 +4521,7 @@ console.log(counter.#number)
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 在 ES2020 中，通过 `#` 我们可以给 class 添加私有变量。在 class 的外部我们无法获取该值。当我们尝试输出 `counter.#number`，语法错误被抛出：我们无法在 class `Counter` 外部获取它!
 
@@ -4523,7 +4530,7 @@ console.log(counter.#number)
 
 ---
 
-## 140. 选择哪一个？
+###### 140. 选择哪一个？
 
 ```javascript
 const teams = [
@@ -4556,7 +4563,7 @@ obj.next(); // { value: "Lisa", done: false }
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 为了遍历 `teams` 数组中对象的属性 `members` 中的每一项，我们需要将 `teams[i].members` 传递给 Generator 函数 `getMembers`。Generator 函数返回一个 generator 对象。为了遍历这个 generator 对象中的每一项，我们需要使用 `yield*`.
 
@@ -4567,7 +4574,7 @@ obj.next(); // { value: "Lisa", done: false }
 
 ---
 
-## 141. 输出什么？
+###### 141. 输出什么？
 
 ```javascript
 const person = {
@@ -4595,7 +4602,7 @@ console.log(person.hobbies);
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 函数 `addHobby` 接受两个参数，`hobby` 和有着对象 `person` 中数组 `hobbies` 默认值的 `hobbies`。
 
@@ -4612,7 +4619,7 @@ pushing `dancing` 和 `baking` 之后，`person.hobbies` 的值为 `["coding", "
 
 ---
 
-## 142. 输出什么？
+###### 142. 输出什么？
 
 ```javascript
 class Bird {
@@ -4639,7 +4646,7 @@ const pet = new Flamingo();
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: B
+#### 答案: B
 
 我们创建了类 `Flamingo` 的实例 `pet`。当我们实例化这个实例，`Flamingo` 中的 `constructor` 被调用。首相，输出 `"I'm pink. 🌸"`, 之后我们调用`super()`。`super()` 调用父类的构造函数，`Bird`。`Bird` 的构造函数被调用，并输出 `"I'm a bird. 🦢"`。
 
@@ -4648,7 +4655,7 @@ const pet = new Flamingo();
 
 ---
 
-## 143. 哪一个选项会导致报错？
+###### 143. 哪一个选项会导致报错？
 
 ```javascript
 const emojis = ["🎄", "🎅🏼", "🎁", "⭐"];
@@ -4667,7 +4674,7 @@ const emojis = ["🎄", "🎅🏼", "🎁", "⭐"];
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: D
+#### 答案: D
 
 `const` 关键字意味着我们不能 _重定义_ 变量中的值，它 _仅可读_。而然，值本身不可修改。数组 `emojis` 中的值可被修改，如 push 新的值, 拼接，又或者将数组的长度设置为0。
 
@@ -4676,7 +4683,7 @@ const emojis = ["🎄", "🎅🏼", "🎁", "⭐"];
 
 ---
 
-## 144. 我们需要向对象 `person` 添加什么，以致执行 `[...person]` 时获得形如 `["Lydia Hallie", 21]` 的输出？
+###### 144. 我们需要向对象 `person` 添加什么，以致执行 `[...person]` 时获得形如 `["Lydia Hallie", 21]` 的输出？
 
 ```javascript
 const person = {
@@ -4689,15 +4696,387 @@ const person = {
 
 - A: 不需要，对象默认就是可迭代的
 - B: `*[Symbol.iterator]() { for (let x in this) yield* this[x] }`
-- C: `*[Symbol.iterator]() { for (let x in this) yield* Object.values(this) }`
+- C: `*[Symbol.iterator]() { yield* Object.values(this) }`
 - D: `*[Symbol.iterator]() { for (let x in this) yield this }`
 
 <details><summary><b>答案</b></summary>
 <p>
 
-### 答案: C
+#### 答案: C
 
 对象默认并不是可迭代的。如果迭代规则被定义，则一个对象是可迭代的（An iterable is an iterable if the iterator protocol is present）。我们可以通过添加迭代器symbol `[Symbol.iterator]` 来定义迭代规则，其返回一个 generator 对象，比如说构建一个 generator 函数 `*[Symbol.iterator]() {}`。如果我们想要返回数组 `["Lydia Hallie", 21]`: `yield* Object.values(this)`，这个 generator 函数一定要 yield 对象 `person` 的`Object.values`。
+
+</p>
+</details>
+
+---
+
+###### 145. 输出什么？
+```javascript
+let count = 0;
+const nums = [0, 1, 2, 3];
+
+nums.forEach(num => {
+	if (num) count += 1
+})
+
+console.log(count)
+```
+
+- A: 1
+- B: 2
+- C: 3
+- D: 4
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: C
+
+在 `forEach` 循环内部的 `if` 会判断 `num` 的值是truthy或者是falsy。因为 `nums` 数组的第一个数字是 `0`，一个falsy值， `if` 语句代码块不会被执行。`count` 仅仅在 `nums` 数组的其他3个数字 `1`，`2`，`3` 时加1。因为 `count` 执行了3次加 `1` 运算，所以 `count` 的值为 `3`。
+
+</p>
+</details>
+
+---
+
+###### 146. 输出是什么？
+
+```javascript
+function getFruit(fruits) {
+	console.log(fruits?.[1]?.[1])
+}
+
+getFruit([['🍊', '🍌'], ['🍍']])
+getFruit()
+getFruit([['🍍'], ['🍊', '🍌']])
+```
+
+- A: `null`, `undefined`, 🍌
+- B: `[]`, `null`, 🍌
+- C: `[]`, `[]`, 🍌
+- D: `undefined`, `undefined`, 🍌
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: D
+
+`?` 允许我们去选择性地访问对象内部更深层的嵌套属性。 我们尝试打印 `fruits` 数组索引值为 `1` 的子数组内部的索引值为 `1` 的元素。 如果在 `fruits` 数组索引值 为 `1` 的位置不存在元素，会直接返回 `undefined`。 如果 `fruits` 数组在索引值为 `1` 的位置存在元素，但是子数组在索引值为 `1` 的位置不存在元素，也会返回 `undefined`。
+
+首先，我们尝试打印 `[['🍊', '🍌'], ['🍍']]` 的子数组 `['🍍']` 的第2个元素。这个子数组只包含一个元素，也就意味着在索引值为 `1` 的位置不存在元素，所以返回的是 `undefined` 。
+
+其次，我们在没有传入任何参数调用了 `getFruits` 函数，也就意味着形参 `fruits` 的默认值为`undefined`。因为我们选择性地链接了 `fruits` 在索引值为 `1` 的元素，因为在索引值为 `1` 的位置不存在元素，因此返回的是 `undefined` 。
+
+最后，我们尝试打印 `['🍍'], ['🍊', '🍌']` 的子数组 `['🍊', '🍌']` 的第2个元素。子数组索引值为 `1`的位置为 `🍌` ，因此它被打印出了。
+
+</p>
+</details>
+
+---
+
+###### 147. 输出什么？
+
+```javascript
+class Calc {
+	constructor() {
+		this.count = 0 
+	}
+
+	increase() {
+		this.count ++
+	}
+}
+
+const calc = new Calc()
+new Calc().increase()
+
+console.log(calc.count)
+```
+
+- A: `0`
+- B: `1`
+- C: `undefined`
+- D: `ReferenceError`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: A
+
+我们设置 `calc` 变量为 `Calc` 类的一个新实例。 然后，我们初始化一个 `Calc` 的新实例，而且调用了这个实例的 `increase` 方法。因为count属性是在 `Calc` class的constructor内部的，所以count属性不会在 `Calc` 的原型链上共享出去。这就意味着calc实例的count值不会被更新，count仍然是 `0`。
+
+</p>
+</details>
+
+---
+
+###### 148. 输出什么?
+
+```javascript
+const user = {
+	email: "e@mail.com",
+	password: "12345"
+}
+
+const updateUser = ({ email, password }) => {
+	if (email) {
+		Object.assign(user, { email })
+	}
+
+	if (password) {
+		user.password = password
+	}
+
+	return user
+}
+
+const updatedUser = updateUser({ email: "new@email.com" })
+
+console.log(updatedUser === user)
+```
+
+- A: `false`
+- B: `true`
+- C: `TypeError`
+- D: `ReferenceError`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: B
+
+ `updateUser` 函数更新user的 `email` 和 `password` 属性的值， 如果它们的值传入函数， 函数返回的就是 `user` 对象。 `updateUser` 函数的返回值是 `user` 对象，意味着updatedUser的值与 `user` 指向的是同一个 `user` 对象。`updatedUser === user` 为 `true`.
+
+</p>
+</details>
+
+---
+
+###### 149. 输出什么?
+
+```javascript
+const fruit = ['🍌', '🍊', '🍎']
+
+fruit.slice(0, 1)
+fruit.splice(0, 1)
+fruit.unshift('🍇')
+
+console.log(fruit)
+```
+
+- A: `['🍌', '🍊', '🍎']`
+- B: `['🍊', '🍎']`
+- C: `['🍇', '🍊', '🍎']`
+- D: `['🍇', '🍌', '🍊', '🍎']`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: C
+
+首先，我们在fruit数组上调用 `slice` 方法。 slice方法不会修改原始数组，但是会返回从数组切片下来的值：香蕉emoji。
+其次，我们在fruit数组上调用 `splice` 方法。 splice方法会修改原始数组，也就意味着fruit数组此时为 `['🍊', '🍎']`。
+最后，我们在fruit数组上调用 `unshift` 方法，通过添加一个值的方式改变了原始数组，添加的是'🍇'，它成为了数组的第一个元素。现在fruit数组的组成为 `['🍇', '🍊', '🍎']`。
+
+</p>
+</details>
+
+---
+
+###### 150. 输出什么?
+
+```javascript
+const animals = {};
+let dog = { emoji: '🐶' }
+let cat = { emoji: '🐈' }
+
+animals[dog] = { ...dog, name: "Mara" }
+animals[cat] = { ...cat, name: "Sara" }
+
+console.log(animals[dog])
+```
+
+- A: `{ emoji: "🐶", name: "Mara" }`
+- B: `{ emoji: "🐈", name: "Sara" }`
+- C: `undefined`
+- D: `ReferenceError`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: B
+
+对象的键会被转换为字符串。
+
+因为  `dog` 的值是一个对象，   `animals[dog]` 实际上意味着我们创建了一个叫做 `"object Object"` 的属性来代表新的对象。  `animals["object Object"]` 现在等于 `{ emoji: "🐶", name: "Mara"}`。
+
+`cat` 也是一个对象，`animals[cat]` 实际上意味着我们在用新的cat的属性覆盖  `animals[``"``object Object``"``]` 的值。
+
+打印  `animals[dog]`，实际上是`animals["object Object"]`，这是因为转化`dog`对象为一个字符串结果 `"object Object"` ，所以返回 `{ emoji: "🐈", name: "Sara" }`。
+
+</p>
+</details>
+
+---
+
+###### 151. 输出什么?
+
+```javascript
+const user = {
+	email: "my@email.com",
+	updateEmail: email => {
+		this.email = email
+	}
+}
+
+user.updateEmail("new@email.com")
+console.log(user.email)
+```
+
+- A: `my@email.com`
+- B: `new@email.com`
+- C: `undefined`
+- D: `ReferenceError`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: A
+
+`updateEmail` 函数是一个箭头函数，它没有和 `user` 对象绑定。这就意味着 `this` 关键字不会引用到 `user` 对象，但是会引用到全局对象。 `user` 对象内部的 `email` 的值不会更新。当打印 `user.email` 的时候， 原始值 `my@email.com` 被返回。
+
+</p>
+</details>
+
+---
+
+###### 152. 输出什么?
+
+```javascript
+const promise1 = Promise.resolve('First')
+const promise2 = Promise.resolve('Second')
+const promise3 = Promise.reject('Third')
+const promise4 = Promise.resolve('Fourth')
+
+const runPromises = async () => {
+	const res1 = await Promise.all([promise1, promise2])
+	const res2  = await Promise.all([promise3, promise4])
+	return [res1, res2]
+}
+
+runPromises()
+	.then(res => console.log(res))
+	.catch(err => console.log(err))
+```
+
+- A: `[['First', 'Second'], ['Fourth']]`
+- B: `[['First', 'Second'], ['Third', 'Fourth']]`
+- C: `[['First', 'Second']]`
+- D: `'Third'`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: D
+
+ `Promise.all` 方法可以并行式运行promise。如果其中一个promise失败了，`Promise.all` 方法会带上被reject的promise的值_rejects_。在这个例子中， `promise3` 带着 `"Third"` 值reject。我们在调用 `runPromises` 时在 `runPromises` 函数内部的 `catch` 方法去捕获任意error从而捕获到被reject的值。因为 `promise3` 带着 `"Third"` 被reject，所以只有 `"Third"` 打印。
+
+</p>
+</details>
+
+---
+
+###### 153. 哪个作为`method`的值可以打印`{ name: "Lydia", age: 22 }`?
+
+```javascript
+const keys = ["name", "age"]
+const values = ["Lydia", 22]
+
+const method = /* ?? */
+Object[method](keys.map((_, i) => {
+	return [keys[i], values[i]]
+})) // { name: "Lydia", age: 22 }
+```
+
+- A: `entries`
+- B: `values`
+- C: `fromEntries`
+- D: `forEach`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: C
+
+ `fromEntries` 方法可以将二维数组转换为对象。在每个子数组的第一个元素是key，在每个子数组的第二个元素是value。在这个例子中，我们映射了 `keys` 数组，它返回了一个数组，数组的第一个元素为keys数组当前索引的值，第二个元素为values数组当前索引的值。
+
+这样就创建了一个包含正确keys和values的子数组的数组，因此结果为`{ name: "Lydia", age: 22 }`。
+
+</p>
+</details>
+
+---
+
+###### 154. 输出什么?
+
+```javascript
+const createMember = ({ email, address = {}}) => {
+	const validEmail = /.+\@.+\..+/.test(email)
+	if (!validEmail) throw new Error("Valid email pls")
+
+	return {
+		email,
+		address: address ? address : null
+	}
+}
+
+const member = createMember({ email: "my@email.com" })
+console.log(member)
+```
+
+- A: `{ email: "my@email.com", address: null }`
+- B: `{ email: "my@email.com" }`
+- C: `{ email: "my@email.com", address: {} }`
+- D: `{ email: "my@email.com", address: undefined }`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: C
+
+ `address` 的默认值是一个空对象 `{}`。当我们设置 `member` 变量为 `createMember` 函数返回的对象，我们没有为address参数传值，意味着address的值为默认的空对象 `{}`。一个空对象是一个truthy值，意味着 `address ? address : null` 条件会返回 `true`。address的值为空对象 `{}`。
+
+</p>
+</details>
+
+---
+
+###### 155. 输出什么?
+
+```javascript
+let randomValue = { name: "Lydia" }
+randomValue = 23
+
+if (!typeof randomValue === "string") {
+	console.log("It's not a string!")
+} else {
+	console.log("Yay it's a string!")
+}
+```
+
+- A: `It's not a string!`
+- B: `Yay it's a string!`
+- C: `TypeError`
+- D: `undefined`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: B
+
+ `if` 语句的条件判断 `!typeof randomValue` 的值是否等于 `"string"`。 `!` 操作符将这个值转化为一个布尔值。如果值是truthy的话，返回值会是 `false`，如果值是falsy，返回值会是 `true`。在这里， `typeof randomValue` 的返回值是一个truthy值 `"number"`，意味着 `!typeof randomValue` 的值是一个布尔值 `false`。
+
+ `!typeof randomValue === "string"` 总是返回false，因为我们实际上是在执行 `false === "string"`。因为条件返回的是 `false`，所以 `else` 语句中的代码块会被运行，因此打印 `Yay it's a string!` 。
 
 </p>
 </details>
